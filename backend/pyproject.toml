@@ -1,0 +1,16 @@
+[project]
+name = "ava"
+version = "0.1.0"
+description = "Aura Vibe Architecting (AVA) - 7Q compiler"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.27",
+  "pydantic>=2.6",
+]
+
+[tool.uvicorn]
+factory = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
