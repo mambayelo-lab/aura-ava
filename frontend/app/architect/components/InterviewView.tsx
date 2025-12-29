@@ -1,49 +1,64 @@
 "use client";
 
 export default function InterviewView({ ontology }: { ontology: any }) {
+  // Mapping des clés AVA vers les labels français
   const entries = [
-    ["Actor", ontology.actor],
-    ["Intention", ontology.intention],
-    ["Event", ontology.event],
-    ["Fragility", ontology.fragility],
-    ["Consequence", ontology.consequence],
-    ["Support", ontology.support],
-    ["Dependency", ontology.dependency],
+    { key: "actor", label: "Acteur", icon: "👤" },
+    { key: "command", label: "Commande", icon: "⚡" },
+    { key: "business_object", label: "Objet métier", icon: "📦" },
+    { key: "object_attributes", label: "Attributs", icon: "🧬" },
+    { key: "event", label: "Événement", icon: "🚩" },
+    { key: "reaction", label: "Réaction", icon: "🔁" },
+    { key: "systems", label: "Systèmes", icon: "🧩" },
+    { key: "visibility", label: "Visibilité", icon: "👁️" },
+    { key: "fragility", label: "Fragilité", icon: "⚠️" },
   ];
+
+  const processName = ontology.name || ontology.process_name || "Processus";
 
   return (
     <div
       style={{
-        background: "#020617",
-        border: "1px solid #1e293b",
+        background: "#ffffff",
+        border: "1px solid #e5e7eb",
         borderRadius: 12,
-        padding: 20,
-        color: "#e5e7eb",
+        padding: 24,
+        color: "#0f172a",
       }}
     >
-      <h2 style={{ marginBottom: 16 }}>{ontology.process_name}</h2>
-
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 12 }}>
-        {entries.map(([label, value]) => (
-          <div key={label}>
-            <div style={{ opacity: 0.6, fontSize: 12 }}>{label}</div>
-            <div>{value || "—"}</div>
-          </div>
-        ))}
+      <div style={{ marginBottom: 24 }}>
+        <div style={{ fontSize: 12, color: "#64748b", fontWeight: 700, marginBottom: 4 }}>
+          Ontologie AVA compilée
+        </div>
+        <h2 style={{ fontSize: 24, fontWeight: 900, margin: 0 }}>{processName}</h2>
       </div>
 
-      {/* Placeholder futur pour schéma fonctionnel */}
-      <div
-        style={{
-          marginTop: 24,
-          padding: 16,
-          borderRadius: 8,
-          background: "#020617",
-          border: "1px dashed #334155",
-          opacity: 0.7,
-        }}
-      >
-        Functional / Application View (auto-generated)
+      <div style={{ display: "grid", gap: 16 }}>
+        {entries.map(({ key, label, icon }) => {
+          const value = ontology.state?.[key] || ontology[key] || "";
+          return (
+            <div
+              key={key}
+              style={{
+                display: "grid",
+                gridTemplateColumns: "120px 1fr",
+                gap: 16,
+                padding: 16,
+                background: "#f8fafc",
+                borderRadius: 8,
+                border: "1px solid #e5e7eb",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ fontSize: 20 }}>{icon}</span>
+                <div style={{ fontWeight: 900, fontSize: 14 }}>{label}</div>
+              </div>
+              <div style={{ fontSize: 14, lineHeight: 1.5, color: value ? "#0f172a" : "#64748b" }}>
+                {value || "—"}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

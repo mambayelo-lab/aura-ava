@@ -2,11 +2,7 @@
 
 import Link from "next/link";
 
-export default function ArchitectLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function OpsLayout({ children }: { children: React.ReactNode }) {
   return (
     <div
       style={{
@@ -26,22 +22,16 @@ export default function ArchitectLayout({
           background: "#ffffff",
         }}
       >
-        <div style={{ fontWeight: 900 }}>Architect Workspace</div>
+        <div style={{ fontWeight: 900 }}>ABP Ops</div>
 
         <nav style={{ display: "flex", gap: 12 }}>
-          <Link href="/architect" style={linkStyle}>
-            Interviews
-          </Link>
-          <Link href="/architect/initiatives" style={linkStyle}>
+          <Link href="/ops/initiatives" style={linkStyle}>
             Initiatives
           </Link>
-          <Link href="/architect/mappings" style={linkStyle}>
-            Mappings
+          <Link href="/ops/signals" style={linkStyle}>
+            Signals
           </Link>
-          <Link href="/architect/architecture" style={linkStyle}>
-            Architecture
-          </Link>
-          <Link href="/architect/ask" style={linkStyle}>
+          <Link href="/ops/ask" style={linkStyle}>
             Ask Aura
           </Link>
         </nav>
@@ -62,3 +52,4 @@ const linkStyle: React.CSSProperties = {
   background: "#f8fafc",
   border: "1px solid #e5e7eb",
 };
+

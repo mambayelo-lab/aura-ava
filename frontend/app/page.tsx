@@ -126,12 +126,21 @@ function isFilled(v?: string) {
 }
 
 function processCompletion(p: Process) {
-  const filled = STEPS.filter((s) => isFilled(p.state[s.key])).length;
+  const state = p.state || {};
+  const filled = STEPS.filter((s) => isFilled(state[s.key])).length;
   return { filled, total: STEPS.length, done: filled === STEPS.length };
 }
 
-function safeJson<T>(res: Response): Promise<T> {
-  return res.json() as Promise<T>;
+async function safeJson<T>(res: Response): Promise<T> {
+  try {
+    const text = await res.text();
+    if (!text) {
+      throw new Error("Empty response body");
+    }
+    return JSON.parse(text) as T;
+  } catch (e) {
+    throw new Error(`Failed to parse JSON: ${e instanceof Error ? e.message : String(e)}`);
+  }
 }
 
 /* =======================
@@ -146,6 +155,7 @@ export default function Page() {
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [initiativeId, setInitiativeId] = useState<string | null>(null);
 
   const currentProcess = useMemo(
     () => processes.find((p) => p.id === currentProcessId) || null,
@@ -163,6 +173,22 @@ export default function Page() {
      Load processes
   ======================= */
 
+  // Récupérer les paramètres URL (process_id, initiative_id)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const urlProcessId = params.get("process_id");
+      const urlInitiativeId = params.get("initiative_id");
+      
+      if (urlProcessId) {
+        setCurrentProcessId(urlProcessId);
+      }
+      if (urlInitiativeId) {
+        setInitiativeId(urlInitiativeId);
+      }
+    }
+  }, []);
+
   useEffect(() => {
     let cancelled = false;
 
@@ -177,7 +203,20 @@ export default function Page() {
         const data = await safeJson<Process[]>(res);
 
         if (cancelled) return;
-        setProcesses(Array.isArray(data) ? data : []);
+        // Normalize data: ensure each process has a state object
+        const normalized = Array.isArray(data)
+          ? data.map((p) => ({ ...p, state: p.state || {} }))
+          : [];
+        setProcesses(normalized);
+        
+        // Si un process_id est dans l'URL, le sélectionner
+        if (typeof window !== "undefined") {
+          const params = new URLSearchParams(window.location.search);
+          const urlProcessId = params.get("process_id");
+          if (urlProcessId && normalized.find((p) => p.id === urlProcessId)) {
+            setCurrentProcessId(urlProcessId);
+          }
+        }
       } catch (e: any) {
         if (cancelled) return;
         setError(e?.message || "Erreur lors du chargement.");
@@ -202,8 +241,15 @@ export default function Page() {
       return;
     }
     const stepKey = STEPS[activeStepIndex]?.key;
-    setInput((currentProcess.state?.[stepKey] || "").toString());
-  }, [currentProcessId, activeStepIndex]); // intentionally not depending on currentProcess object
+    if (!stepKey) {
+      setInput("");
+      return;
+    }
+    // Safe access to state with null/undefined checks
+    const state = currentProcess.state || {};
+    const value = state[stepKey];
+    setInput(value ? String(value) : "");
+  }, [currentProcess, activeStepIndex]); // Now depends on currentProcess to sync when state changes
 
   /* =======================
      Actions
@@ -229,6 +275,20 @@ export default function Page() {
       }
 
       const p = await safeJson<Process>(res);
+
+      // Si on a un initiative_id, lier le process à l'initiative
+      if (initiativeId) {
+        try {
+          await fetch(`${API}/initiatives/${initiativeId}/link_process`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ process_id: p.id }),
+          });
+        } catch (e) {
+          // Ne pas bloquer si le lien échoue
+          console.warn("Failed to link process to initiative:", e);
+        }
+      }
 
       setProcesses((ps) => [...ps, p]);
       setCurrentProcessId(p.id);
@@ -259,13 +319,25 @@ export default function Page() {
     const key = activeStep.key;
     const value = input.trim();
 
+    // Validation: ensure value is not empty
+    if (!value) {
+      setError("La réponse ne peut pas être vide.");
+      return;
+    }
+
+    // Save previous state for rollback
+    const previousProcess = { ...currentProcess };
+
     const updated: Process = {
       ...currentProcess,
       state: {
-        ...currentProcess.state,
+        ...(currentProcess.state || {}),
         [key]: value,
       },
     };
+
+    // Optimistic update
+    setProcesses((ps) => ps.map((p) => (p.id === updated.id ? updated : p)));
 
     try {
       setBusy(true);
@@ -282,14 +354,17 @@ export default function Page() {
         throw new Error(`Erreur sauvegarde (${res.status}) ${txt ? `: ${txt}` : ""}`);
       }
 
-      // On garde le state local synchronisé
-      setProcesses((ps) => ps.map((p) => (p.id === updated.id ? updated : p)));
+      // Use server response to sync state (more reliable than optimistic update)
+      const serverProcess = await safeJson<Process>(res);
+      setProcesses((ps) => ps.map((p) => (p.id === serverProcess.id ? serverProcess : p)));
 
       // Auto-advance
       if (activeStepIndex < STEPS.length - 1) {
         setActiveStepIndex((i) => i + 1);
       }
     } catch (e: any) {
+      // Rollback to previous state on error
+      setProcesses((ps) => ps.map((p) => (p.id === previousProcess.id ? previousProcess : p)));
       setError(e?.message || "Erreur lors de la sauvegarde.");
     } finally {
       setBusy(false);
@@ -700,7 +775,8 @@ export default function Page() {
               ) : (
                 <div style={{ marginTop: 14, display: "grid", gap: 10 }}>
                   {STEPS.map((s, i) => {
-                    const value = currentProcess.state[s.key] || "";
+                    const state = currentProcess.state || {};
+                    const value = state[s.key] || "";
                     const done = isFilled(value);
 
                     return (
