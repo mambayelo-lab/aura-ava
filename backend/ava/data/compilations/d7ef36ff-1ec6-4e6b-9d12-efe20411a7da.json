@@ -1,0 +1,32 @@
+{
+  "interview_id": "d7ef36ff-1ec6-4e6b-9d12-efe20411a7da",
+  "fact_graph": {
+    "nodes": [],
+    "edges": []
+  },
+  "reasoning_graph": {
+    "nodes": [],
+    "edges": []
+  },
+  "validation": {
+    "valid": true,
+    "issues": [
+      {
+        "level": "warning",
+        "message": "Aucun fait identifié. La décision manque de données."
+      },
+      {
+        "level": "warning",
+        "message": "Aucune règle métier définie."
+      }
+    ]
+  },
+  "stats": {
+    "total_nodes": 0,
+    "total_edges": 0,
+    "facts": 0,
+    "rules": 0,
+    "signals": 0,
+    "pain_points": 0
+  }
+}

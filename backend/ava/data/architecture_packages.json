@@ -1,0 +1,82 @@
+[
+  {
+    "id": "arch_422922",
+    "initiative_id": null,
+    "process_id": "976ccc31-d9e8-4d02-8fa2-d45fd76cfd24",
+    "generated_at": "2025-12-30 04:32:26",
+    "capability_map": {
+      "L3": []
+    },
+    "functional_static_mermaid": "flowchart TD\n    classDef rounded fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef capability fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef application fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef event fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    Système_métier[\"🧑 Système métier\"]\n    class Système_métier rounded\n    subgraph Applications[\"Applications\"]\n        Plateforme_de_gestion_client[\"Plateforme de gestion client\"]\n        solution_de_facturation[\"solution de facturation\"]\n        portail_client[\"portail client\"]\n    end",
+    "functional_dynamic_mermaid": "sequenceDiagram\n    participant Actor as Système métier\n    participant Plateforme_de_gestion_client as Plateforme de gestion client\n    participant solution_de_facturation as solution de facturation\n    participant portail_client as portail client",
+    "integration_mermaid": "graph LR\n    Sys1_Plateforme_de_gestion_cli[\"Plateforme de gestion client\"]\n    Sys2_solution_de_facturation[\"solution de facturation\"]\n    Sys3_portail_client[\"portail client\"]",
+    "app_coverage": {},
+    "trace": {
+      "items": []
+    }
+  },
+  {
+    "id": "arch_641353",
+    "initiative_id": null,
+    "process_id": "7771a3b6-e73f-4381-8fe4-a31c41a48795",
+    "generated_at": "2025-12-30 04:32:37",
+    "capability_map": {
+      "L3": []
+    },
+    "functional_static_mermaid": "flowchart TD\n    classDef rounded fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef capability fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef application fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef event fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    Système_métier[\"🧑 Système métier\"]\n    class Système_métier rounded\n    subgraph Applications[\"Applications\"]\n        ezeae[\"ezeae\"]\n    end",
+    "functional_dynamic_mermaid": "sequenceDiagram\n    participant Actor as Système métier\n    participant ezeae as ezeae",
+    "integration_mermaid": "graph LR\n    A[\"Aucune intégration détectée\"]",
+    "app_coverage": {},
+    "trace": {
+      "items": []
+    }
+  },
+  {
+    "id": "arch_422922",
+    "initiative_id": null,
+    "process_id": "976ccc31-d9e8-4d02-8fa2-d45fd76cfd24",
+    "generated_at": "2025-12-30 04:34:11",
+    "capability_map": {
+      "L3": []
+    },
+    "functional_static_mermaid": "flowchart TD\n    classDef rounded fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef capability fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef application fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef event fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    Système_métier[\"🧑 Système métier\"]\n    class Système_métier rounded\n    subgraph Applications[\"Applications\"]\n        Plateforme_de_gestion_client[\"Plateforme de gestion client\"]\n        solution_de_facturation[\"solution de facturation\"]\n        portail_client[\"portail client\"]\n    end",
+    "functional_dynamic_mermaid": "sequenceDiagram\n    participant Actor as Système métier\n    participant Plateforme_de_gestion_client as Plateforme de gestion client\n    participant solution_de_facturation as solution de facturation\n    participant portail_client as portail client",
+    "integration_mermaid": "graph LR\n    Sys1_Plateforme_de_gestion_cli[\"Plateforme de gestion client\"]\n    Sys2_solution_de_facturation[\"solution de facturation\"]\n    Sys3_portail_client[\"portail client\"]",
+    "app_coverage": {},
+    "trace": {
+      "items": []
+    }
+  },
+  {
+    "id": "arch_641353",
+    "initiative_id": null,
+    "process_id": "7771a3b6-e73f-4381-8fe4-a31c41a48795",
+    "generated_at": "2025-12-30 04:34:46",
+    "capability_map": {
+      "L3": []
+    },
+    "functional_static_mermaid": "flowchart TD\n    classDef rounded fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef capability fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef application fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef event fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    Système_métier[\"🧑 Système métier\"]\n    class Système_métier rounded\n    subgraph Applications[\"Applications\"]\n        ezeae[\"ezeae\"]\n    end",
+    "functional_dynamic_mermaid": "sequenceDiagram\n    participant Actor as Système métier\n    participant ezeae as ezeae",
+    "integration_mermaid": "graph LR\n    A[\"Aucune intégration détectée\"]",
+    "app_coverage": {},
+    "trace": {
+      "items": []
+    }
+  },
+  {
+    "id": "arch_422922",
+    "initiative_id": null,
+    "process_id": "976ccc31-d9e8-4d02-8fa2-d45fd76cfd24",
+    "generated_at": "2025-12-30 04:34:47",
+    "capability_map": {
+      "L3": []
+    },
+    "functional_static_mermaid": "flowchart TD\n    classDef rounded fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef capability fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef application fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    classDef event fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff,rx:12px,ry:12px\n    Système_métier[\"🧑 Système métier\"]\n    class Système_métier rounded\n    subgraph Applications[\"Applications\"]\n        Plateforme_de_gestion_client[\"Plateforme de gestion client\"]\n        solution_de_facturation[\"solution de facturation\"]\n        portail_client[\"portail client\"]\n    end",
+    "functional_dynamic_mermaid": "sequenceDiagram\n    participant Actor as Système métier\n    participant Plateforme_de_gestion_client as Plateforme de gestion client\n    participant solution_de_facturation as solution de facturation\n    participant portail_client as portail client",
+    "integration_mermaid": "graph LR\n    Sys1_Plateforme_de_gestion_cli[\"Plateforme de gestion client\"]\n    Sys2_solution_de_facturation[\"solution de facturation\"]\n    Sys3_portail_client[\"portail client\"]",
+    "app_coverage": {},
+    "trace": {
+      "items": []
+    }
+  }
+]

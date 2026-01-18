@@ -1,0 +1,194 @@
+{
+  "interview_id": "13f872ae-236e-4fdb-b1cc-9c67a97e509e",
+  "fact_graph": {
+    "nodes": [
+      {
+        "id": "decision-13f872ae-236e-4fdb-b1cc-9c67a97e509e",
+        "type": "decision",
+        "label": "xcvxvh,gh,",
+        "data": {
+          "id": "2a72ce1e-658d-4b8b-9cfd-f969b5ca2e9e",
+          "label": "xcvxvh,gh,",
+          "description": "fbdfhbfghfjgnf"
+        }
+      },
+      {
+        "id": "fact-b207786f-203e-4c7a-a8e2-7fcc6627bc4a",
+        "type": "fact",
+        "label": "seereryhebgfh",
+        "data": {
+          "id": "b207786f-203e-4c7a-a8e2-7fcc6627bc4a",
+          "label": "seereryhebgfh",
+          "source_type": "system",
+          "description": "xbdfhd"
+        }
+      },
+      {
+        "id": "origin-b207786f-203e-4c7a-a8e2-7fcc6627bc4a",
+        "type": "data_object",
+        "label": "xbdfhd",
+        "data": {
+          "source_type": "system",
+          "description": "xbdfhd"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-d-f-0",
+        "source": "decision-13f872ae-236e-4fdb-b1cc-9c67a97e509e",
+        "target": "fact-b207786f-203e-4c7a-a8e2-7fcc6627bc4a",
+        "type": "requires",
+        "label": null
+      },
+      {
+        "id": "edge-f-o-0",
+        "source": "fact-b207786f-203e-4c7a-a8e2-7fcc6627bc4a",
+        "target": "origin-b207786f-203e-4c7a-a8e2-7fcc6627bc4a",
+        "type": "stored_in",
+        "label": null
+      }
+    ]
+  },
+  "reasoning_graph": {
+    "nodes": [
+      {
+        "id": "rule-d49bc06e-faaa-4c19-9639-8766f378e09b",
+        "type": "rule",
+        "label": "WHILE",
+        "data": {
+          "id": "d49bc06e-faaa-4c19-9639-8766f378e09b",
+          "type": "while",
+          "condition": "xdfhtrfhfgj",
+          "consequence": "hfgg"
+        }
+      },
+      {
+        "id": "condition-d49bc06e-faaa-4c19-9639-8766f378e09b",
+        "type": "condition",
+        "label": "xdfhtrfhfgj",
+        "data": {
+          "text": "xdfhtrfhfgj"
+        }
+      },
+      {
+        "id": "consequence-d49bc06e-faaa-4c19-9639-8766f378e09b",
+        "type": "consequence",
+        "label": "hfgg",
+        "data": {
+          "text": "hfgg"
+        }
+      },
+      {
+        "id": "rule-c9e6d99e-8bf9-4ff7-9611-a59e044b76f3",
+        "type": "rule",
+        "label": "IF-THEN",
+        "data": {
+          "id": "c9e6d99e-8bf9-4ff7-9611-a59e044b76f3",
+          "type": "if_then",
+          "condition": "bfhfxg",
+          "consequence": "fdhfgh"
+        }
+      },
+      {
+        "id": "condition-c9e6d99e-8bf9-4ff7-9611-a59e044b76f3",
+        "type": "condition",
+        "label": "bfhfxg",
+        "data": {
+          "text": "bfhfxg"
+        }
+      },
+      {
+        "id": "consequence-c9e6d99e-8bf9-4ff7-9611-a59e044b76f3",
+        "type": "consequence",
+        "label": "fdhfgh",
+        "data": {
+          "text": "fdhfgh"
+        }
+      },
+      {
+        "id": "rule-1a6cce29-afe8-40fb-a890-36ba507f97c9",
+        "type": "rule",
+        "label": "IF-THEN",
+        "data": {
+          "id": "1a6cce29-afe8-40fb-a890-36ba507f97c9",
+          "type": "if_then",
+          "condition": "ffdfgh",
+          "consequence": "gfngfnf"
+        }
+      },
+      {
+        "id": "condition-1a6cce29-afe8-40fb-a890-36ba507f97c9",
+        "type": "condition",
+        "label": "ffdfgh",
+        "data": {
+          "text": "ffdfgh"
+        }
+      },
+      {
+        "id": "consequence-1a6cce29-afe8-40fb-a890-36ba507f97c9",
+        "type": "consequence",
+        "label": "gfngfnf",
+        "data": {
+          "text": "gfngfnf"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-c-r-0",
+        "source": "condition-d49bc06e-faaa-4c19-9639-8766f378e09b",
+        "target": "rule-d49bc06e-faaa-4c19-9639-8766f378e09b",
+        "type": "if",
+        "label": null
+      },
+      {
+        "id": "edge-r-c-0",
+        "source": "rule-d49bc06e-faaa-4c19-9639-8766f378e09b",
+        "target": "consequence-d49bc06e-faaa-4c19-9639-8766f378e09b",
+        "type": "then",
+        "label": null
+      },
+      {
+        "id": "edge-c-r-1",
+        "source": "condition-c9e6d99e-8bf9-4ff7-9611-a59e044b76f3",
+        "target": "rule-c9e6d99e-8bf9-4ff7-9611-a59e044b76f3",
+        "type": "if",
+        "label": null
+      },
+      {
+        "id": "edge-r-c-1",
+        "source": "rule-c9e6d99e-8bf9-4ff7-9611-a59e044b76f3",
+        "target": "consequence-c9e6d99e-8bf9-4ff7-9611-a59e044b76f3",
+        "type": "then",
+        "label": null
+      },
+      {
+        "id": "edge-c-r-2",
+        "source": "condition-1a6cce29-afe8-40fb-a890-36ba507f97c9",
+        "target": "rule-1a6cce29-afe8-40fb-a890-36ba507f97c9",
+        "type": "if",
+        "label": null
+      },
+      {
+        "id": "edge-r-c-2",
+        "source": "rule-1a6cce29-afe8-40fb-a890-36ba507f97c9",
+        "target": "consequence-1a6cce29-afe8-40fb-a890-36ba507f97c9",
+        "type": "then",
+        "label": null
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "issues": []
+  },
+  "stats": {
+    "total_nodes": 12,
+    "total_edges": 8,
+    "facts": 1,
+    "rules": 3,
+    "signals": 0,
+    "pain_points": 0
+  }
+}

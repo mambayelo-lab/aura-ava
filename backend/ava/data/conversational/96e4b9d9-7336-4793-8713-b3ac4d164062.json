@@ -1,0 +1,66 @@
+{
+  "id": "96e4b9d9-7336-4793-8713-b3ac4d164062",
+  "created_at": "2026-01-02T14:07:59.323246",
+  "updated_at": "2026-01-02T14:18:55.792269",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [
+    {
+      "id": "act_0_0",
+      "label": "Recevoir les commandes en réception",
+      "description": null,
+      "validated": true,
+      "trigger_event": null,
+      "trigger_actor": "Transporteur logistique",
+      "trigger_actor_type": "personne",
+      "trigger_system": null,
+      "output_object": null,
+      "output_system": null,
+      "performed_by": null,
+      "performed_by_type": null,
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    }
+  ],
+  "business_objects": [],
+  "actors": [],
+  "rules": [],
+  "signals": [],
+  "pain_points": [],
+  "current_phase": "deep_dive",
+  "current_activity_index": 0,
+  "current_question_index": 1,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Communiquez-moi en premier vos activités, dans l'ordre. Est-ce que cela vous convient?",
+      "timestamp": "2026-01-02T14:07:59.323246"
+    },
+    {
+      "role": "assistant",
+      "content": "Parfait ! Veuillez maintenant saisir vos activités dans l'ordre. Vous pouvez utiliser les exemples comme guide.",
+      "timestamp": "2026-01-02T14:08:02.737342"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent ! Nous avons 1 activités. Commençons par approfondir 'Recevoir les commandes en réception'. Qu'est-ce qui déclenche l'activité 'Recevoir les commandes en réception' ?",
+      "timestamp": "2026-01-02T14:08:14.881332"
+    },
+    {
+      "role": "user",
+      "content": "L'arrivée du camion",
+      "timestamp": "2026-01-02T14:08:32.037963"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Recevoir les commandes en réception' ?",
+      "timestamp": "2026-01-02T14:18:55.792269"
+    }
+  ],
+  "status": "draft",
+  "submitted_at": null,
+  "notes_to_architects": ""
+}

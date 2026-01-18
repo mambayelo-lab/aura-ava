@@ -1,0 +1,133 @@
+{
+  "interview_id": "a3d5f897-1b19-4ce8-ac00-1658c3ec5c65",
+  "fact_graph": {
+    "nodes": [
+      {
+        "id": "act_0_0",
+        "type": "activity",
+        "label": "Identifier le PDL client",
+        "data": {
+          "validated": true
+        }
+      },
+      {
+        "id": "act_1_1",
+        "type": "activity",
+        "label": "Estimer la consommation",
+        "data": {
+          "validated": true
+        }
+      },
+      {
+        "id": "act_2_2",
+        "type": "activity",
+        "label": "Proposer une offre",
+        "data": {
+          "validated": true
+        }
+      },
+      {
+        "id": "obj_0",
+        "type": "data_object",
+        "label": "Commande",
+        "data": {
+          "attributes": [
+            "numéro",
+            "date",
+            "client",
+            "Numéro",
+            "Date",
+            "Client",
+            "Montant",
+            "Statut"
+          ]
+        }
+      },
+      {
+        "id": "actor_0",
+        "type": "actor",
+        "label": "Conseiller de vente.",
+        "data": {
+          "type": "personne"
+        }
+      },
+      {
+        "id": "actor_1",
+        "type": "actor",
+        "label": "Conseiller commercial",
+        "data": {
+          "type": "personne"
+        }
+      }
+    ],
+    "edges": []
+  },
+  "reasoning_graph": {
+    "nodes": [
+      {
+        "id": "rule_0",
+        "type": "rule",
+        "label": "Si PDL non existant → Créer PDL",
+        "data": {
+          "type": "SI_ALORS"
+        }
+      },
+      {
+        "id": "rule_1",
+        "type": "rule",
+        "label": "montant > 5000€ → validation manager requise",
+        "data": {
+          "type": "SI_ALORS"
+        }
+      },
+      {
+        "id": "rule_2",
+        "type": "rule",
+        "label": "montant > 5000€ → validation manager requise",
+        "data": {
+          "type": "SI_ALORS"
+        }
+      },
+      {
+        "id": "signal_0",
+        "type": "signal",
+        "label": "",
+        "data": {
+          "severity": "MEDIUM",
+          "threshold": null
+        }
+      },
+      {
+        "id": "signal_1",
+        "type": "signal",
+        "label": "",
+        "data": {
+          "severity": "MEDIUM",
+          "threshold": null
+        }
+      },
+      {
+        "id": "signal_2",
+        "type": "signal",
+        "label": "",
+        "data": {
+          "severity": "MEDIUM",
+          "threshold": null
+        }
+      }
+    ],
+    "edges": []
+  },
+  "validation": {
+    "valid": true,
+    "issues": []
+  },
+  "stats": {
+    "total_nodes": 12,
+    "total_edges": 0,
+    "facts": 1,
+    "rules": 6,
+    "signals": 3,
+    "pain_points": 3
+  }
+}

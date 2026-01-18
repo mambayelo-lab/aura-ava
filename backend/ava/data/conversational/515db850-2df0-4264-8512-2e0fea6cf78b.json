@@ -1,0 +1,76 @@
+{
+  "id": "515db850-2df0-4264-8512-2e0fea6cf78b",
+  "created_at": "2026-01-02T13:45:47.242772",
+  "updated_at": "2026-01-02T13:51:05.084260",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [
+    {
+      "id": "act_0_0",
+      "label": "réceptionner des commandes d'achat",
+      "description": null,
+      "validated": true,
+      "trigger_event": "arrivée d'un camion",
+      "trigger_actor": null,
+      "trigger_actor_type": "personne",
+      "trigger_system": null,
+      "output_object": null,
+      "output_system": null,
+      "performed_by": null,
+      "performed_by_type": null,
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    }
+  ],
+  "business_objects": [],
+  "actors": [],
+  "rules": [],
+  "signals": [],
+  "pain_points": [],
+  "current_phase": "completed",
+  "current_activity_index": 0,
+  "current_question_index": 1,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Communiquez-moi en premier vos activités, dans l'ordre. Est-ce que cela vous convient?",
+      "timestamp": "2026-01-02T13:45:47.242772"
+    },
+    {
+      "role": "assistant",
+      "content": "Parfait ! Veuillez maintenant saisir vos activités dans l'ordre. Vous pouvez utiliser les exemples comme guide.",
+      "timestamp": "2026-01-02T13:46:05.522249"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent ! Nous avons 1 activités. Commençons par approfondir 'réceptionner des commandes d'achat'. Qu'est-ce qui déclenche l'activité 'réceptionner des commandes d'achat' ?",
+      "timestamp": "2026-01-02T13:47:04.653546"
+    },
+    {
+      "role": "user",
+      "content": "arrivée d'un camion ",
+      "timestamp": "2026-01-02T13:47:42.078966"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'réceptionner des commandes d'achat' ?",
+      "timestamp": "2026-01-02T13:48:40.081787"
+    },
+    {
+      "role": "user",
+      "content": "Création de stock dans l'entrepot",
+      "timestamp": "2026-01-02T13:49:34.426138"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-02T13:50:20.132616"
+    }
+  ],
+  "status": "completed",
+  "submitted_at": null,
+  "notes_to_architects": ""
+}

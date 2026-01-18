@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sale_001",
+    "customer_name": "Acme Corp",
+    "amount": 15000.50,
+    "status": "completed",
+    "created_at": "2024-01-15T10:30:00Z",
+    "product_category": "Enterprise",
+    "sales_rep": "John Doe"
+  },
+  {
+    "id": "sale_002",
+    "customer_name": "TechStart Inc",
+    "amount": 8500.00,
+    "status": "pending",
+    "created_at": "2024-01-16T14:20:00Z",
+    "product_category": "SMB",
+    "sales_rep": "Jane Smith"
+  },
+  {
+    "id": "sale_003",
+    "customer_name": "Global Systems",
+    "amount": 25000.75,
+    "status": "completed",
+    "created_at": "2024-01-17T09:15:00Z",
+    "product_category": "Enterprise",
+    "sales_rep": "John Doe"
+  }
+]
+

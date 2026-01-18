@@ -1,0 +1,76 @@
+{
+  "id": "0053c892-5bad-4d89-bfa7-1d67e529d48c",
+  "created_at": "2026-01-03T19:02:43.071987",
+  "updated_at": "2026-01-03T19:16:21.206043",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [
+    {
+      "id": "act_0_0",
+      "label": "Facturer le client",
+      "description": null,
+      "validated": true,
+      "trigger_event": null,
+      "trigger_actor": "Client",
+      "trigger_actor_type": "personne",
+      "trigger_system": "Site web",
+      "output_object": null,
+      "output_system": null,
+      "performed_by": null,
+      "performed_by_type": null,
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    }
+  ],
+  "business_objects": [],
+  "actors": [],
+  "rules": [],
+  "signals": [],
+  "pain_points": [],
+  "current_phase": "completed",
+  "current_activity_index": 0,
+  "current_question_index": 1,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Communiquez-moi en premier vos activités, dans l'ordre. Est-ce que cela vous convient?",
+      "timestamp": "2026-01-03T19:02:43.071987"
+    },
+    {
+      "role": "assistant",
+      "content": "Parfait ! Veuillez maintenant saisir vos activités dans l'ordre. Vous pouvez utiliser les exemples comme guide.",
+      "timestamp": "2026-01-03T19:02:48.518951"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent ! Nous avons 1 activités. Commençons par approfondir 'Facturer le client'. Qu'est-ce qui déclenche l'activité 'Facturer le client' ?",
+      "timestamp": "2026-01-03T19:03:01.546776"
+    },
+    {
+      "role": "user",
+      "content": "La signature du contrat",
+      "timestamp": "2026-01-03T19:03:11.091129"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Facturer le client' ?",
+      "timestamp": "2026-01-03T19:03:57.444692"
+    },
+    {
+      "role": "user",
+      "content": "Facture générée",
+      "timestamp": "2026-01-03T19:07:32.863101"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-03T19:16:21.206043"
+    }
+  ],
+  "status": "completed",
+  "submitted_at": null,
+  "notes_to_architects": ""
+}

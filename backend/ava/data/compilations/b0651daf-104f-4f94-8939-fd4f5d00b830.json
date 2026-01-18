@@ -1,0 +1,83 @@
+{
+  "interview_id": "b0651daf-104f-4f94-8939-fd4f5d00b830",
+  "fact_graph": {
+    "nodes": [
+      {
+        "id": "act_0_0",
+        "type": "activity",
+        "label": "Signer le contrat avec le client",
+        "data": {
+          "validated": true
+        }
+      },
+      {
+        "id": "act_1_1",
+        "type": "activity",
+        "label": "Déclencher le processus de facturation",
+        "data": {
+          "validated": true
+        }
+      },
+      {
+        "id": "obj_0",
+        "type": "data_object",
+        "label": "Contrat",
+        "data": {
+          "attributes": [
+            "numéro",
+            "date",
+            "client",
+            "Numéro",
+            "Date",
+            "Client",
+            "Montant",
+            "Statut"
+          ]
+        }
+      },
+      {
+        "id": "actor_0",
+        "type": "actor",
+        "label": "Le client.",
+        "data": {
+          "type": "personne"
+        }
+      }
+    ],
+    "edges": []
+  },
+  "reasoning_graph": {
+    "nodes": [
+      {
+        "id": "rule_0",
+        "type": "rule",
+        "label": " → ",
+        "data": {
+          "type": "SI_ALORS"
+        }
+      },
+      {
+        "id": "signal_0",
+        "type": "signal",
+        "label": "",
+        "data": {
+          "severity": "MEDIUM",
+          "threshold": null
+        }
+      }
+    ],
+    "edges": []
+  },
+  "validation": {
+    "valid": true,
+    "issues": []
+  },
+  "stats": {
+    "total_nodes": 6,
+    "total_edges": 0,
+    "facts": 1,
+    "rules": 2,
+    "signals": 1,
+    "pain_points": 0
+  }
+}

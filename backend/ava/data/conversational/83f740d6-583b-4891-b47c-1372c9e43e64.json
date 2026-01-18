@@ -1,0 +1,27 @@
+{
+  "id": "83f740d6-583b-4891-b47c-1372c9e43e64",
+  "created_at": "2026-01-02T00:32:26.590391",
+  "updated_at": "2026-01-02T00:32:26.590391",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [],
+  "business_objects": [],
+  "actors": [],
+  "rules": [],
+  "signals": [],
+  "pain_points": [],
+  "current_phase": "discovery",
+  "current_activity_index": 0,
+  "current_question_index": 0,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Commencez par le début, et racontez-moi naturellement.",
+      "timestamp": "2026-01-02T00:32:26.590391"
+    }
+  ],
+  "status": "draft",
+  "submitted_at": null,
+  "notes_to_architects": ""
+}

@@ -1,0 +1,67 @@
+{
+  "id": "2b889b98-a6c3-4e50-98db-5d6e58cbcce1",
+  "created_at": "2026-01-02T00:42:00.583863",
+  "updated_at": "2026-01-02T00:51:28.730033",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [],
+  "business_objects": [],
+  "actors": [],
+  "rules": [],
+  "signals": [],
+  "pain_points": [],
+  "current_phase": "discovery",
+  "current_activity_index": 0,
+  "current_question_index": 0,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Commencez par le début, et racontez-moi naturellement.",
+      "timestamp": "2026-01-02T00:42:00.583863"
+    },
+    {
+      "role": "user",
+      "content": "gestion des offres",
+      "timestamp": "2026-01-02T00:46:47.091677"
+    },
+    {
+      "role": "assistant",
+      "content": "J'ai identifié 3 activités potentielles dans votre description :\n\n• Recevoir demande client\n• Vérifier disponibilité stock\n• Créer devis client\n\nVous pouvez les ajouter, modifier ou ignorer selon vos besoins.",
+      "timestamp": "2026-01-02T00:46:47.091677"
+    },
+    {
+      "role": "user",
+      "content": "ok",
+      "timestamp": "2026-01-02T00:47:26.750757"
+    },
+    {
+      "role": "assistant",
+      "content": "J'ai identifié 3 activités potentielles dans votre description :\n\n• Recevoir demande client\n• Vérifier disponibilité stock\n• Créer devis client\n\nVous pouvez les ajouter, modifier ou ignorer selon vos besoins.",
+      "timestamp": "2026-01-02T00:47:26.750757"
+    },
+    {
+      "role": "user",
+      "content": "ajouter",
+      "timestamp": "2026-01-02T00:49:05.988889"
+    },
+    {
+      "role": "assistant",
+      "content": "J'ai identifié 3 activités potentielles dans votre description :\n\n• Recevoir demande client\n• Vérifier disponibilité stock\n• Créer devis client\n\nVous pouvez les ajouter, modifier ou ignorer selon vos besoins.",
+      "timestamp": "2026-01-02T00:49:05.988889"
+    },
+    {
+      "role": "user",
+      "content": "ok",
+      "timestamp": "2026-01-02T00:51:28.730033"
+    },
+    {
+      "role": "assistant",
+      "content": "J'ai identifié 3 activités potentielles dans votre description :\n\n• Recevoir demande client\n• Vérifier disponibilité stock\n• Créer devis client\n\nVous pouvez les ajouter, modifier ou ignorer selon vos besoins.",
+      "timestamp": "2026-01-02T00:51:28.730033"
+    }
+  ],
+  "status": "draft",
+  "submitted_at": null,
+  "notes_to_architects": ""
+}

@@ -1,0 +1,27 @@
+{
+  "id": "23546eff-ef7e-45a5-9781-ece76291294b",
+  "created_at": "2026-01-08T22:24:49.602529",
+  "updated_at": "2026-01-08T22:24:49.602529",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [],
+  "business_objects": [],
+  "actors": [],
+  "rules": [],
+  "signals": [],
+  "pain_points": [],
+  "current_phase": "discovery",
+  "current_activity_index": 0,
+  "current_question_index": 0,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Communiquez-moi en premier vos activités, dans l'ordre. Est-ce que cela vous convient?",
+      "timestamp": "2026-01-08T22:24:49.602529"
+    }
+  ],
+  "status": "draft",
+  "submitted_at": null,
+  "notes_to_architects": ""
+}

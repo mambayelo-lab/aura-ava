@@ -1,0 +1,418 @@
+{
+  "id": "c8ed9552-7cea-4b1c-9f46-a2cdb142b2da",
+  "created_at": "2026-01-01T23:32:10.940084",
+  "updated_at": "2026-01-02T00:19:38.803922",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [
+    {
+      "id": "act_0_0",
+      "label": "Recevoir demande client",
+      "description": null,
+      "validated": true,
+      "trigger_event": "Demande client",
+      "trigger_actor": "",
+      "trigger_actor_type": "personne",
+      "trigger_system": "Messagerie",
+      "output_object": null,
+      "output_system": null,
+      "performed_by": "actor_0",
+      "performed_by_type": "personne",
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    },
+    {
+      "id": "act_1_1",
+      "label": "Vérifier disponibilité stock",
+      "description": null,
+      "validated": true,
+      "trigger_event": "Demande client ur",
+      "trigger_actor": "Client",
+      "trigger_actor_type": "personne",
+      "trigger_system": "Messagerie",
+      "output_object": "obj_0",
+      "output_system": "CRM",
+      "performed_by": "actor_0",
+      "performed_by_type": "personne",
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    },
+    {
+      "id": "act_2_2",
+      "label": "Créer devis client",
+      "description": null,
+      "validated": true,
+      "trigger_event": "Demande",
+      "trigger_actor": "Vendeur",
+      "trigger_actor_type": "personne",
+      "trigger_system": "CRM",
+      "output_object": "obj_1",
+      "output_system": "CRM",
+      "performed_by": "actor_1",
+      "performed_by_type": "personne",
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    },
+    {
+      "id": "act_manual_3",
+      "label": "Traiter commande",
+      "description": null,
+      "validated": true,
+      "trigger_event": null,
+      "trigger_actor": null,
+      "trigger_actor_type": null,
+      "trigger_system": null,
+      "output_object": null,
+      "output_system": null,
+      "performed_by": null,
+      "performed_by_type": null,
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    }
+  ],
+  "business_objects": [
+    {
+      "id": "obj_0",
+      "name": "Commande",
+      "attributes": [
+        "numéro",
+        "date",
+        "client",
+        "Numéro",
+        "Date",
+        "Client",
+        "Montant",
+        "Statut"
+      ],
+      "created_by_activity": "act_1_1",
+      "used_by_activities": [],
+      "source_system": "CRM"
+    },
+    {
+      "id": "obj_1",
+      "name": "devis",
+      "attributes": [
+        "numéro",
+        "date",
+        "client",
+        "business_object",
+        "output_system",
+        "attributes"
+      ],
+      "created_by_activity": "act_2_2",
+      "used_by_activities": [],
+      "source_system": "CRM"
+    }
+  ],
+  "actors": [
+    {
+      "id": "actor_0",
+      "name": "Conseiller commercial",
+      "type": "personne",
+      "role": null,
+      "activities": [
+        "act_0_0",
+        "act_1_1"
+      ]
+    },
+    {
+      "id": "actor_1",
+      "name": "Vendeur",
+      "type": "personne",
+      "role": null,
+      "activities": [
+        "act_2_2"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule_0",
+      "condition": "Demande client vide",
+      "action": "Notifier le client",
+      "type": "SI_ALORS",
+      "applies_to_activity": "act_0_0",
+      "applies_to_object": null
+    }
+  ],
+  "signals": [
+    {
+      "id": "signal_0",
+      "event": "",
+      "action": "",
+      "severity": "MEDIUM",
+      "threshold": null,
+      "applies_to_activity": "act_0_0"
+    },
+    {
+      "id": "signal_1",
+      "event": "",
+      "action": "",
+      "severity": "MEDIUM",
+      "threshold": null,
+      "applies_to_activity": "act_1_1"
+    }
+  ],
+  "pain_points": [],
+  "current_phase": "completed",
+  "current_activity_index": 3,
+  "current_question_index": 0,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Commencez par le début, et racontez-moi naturellement.",
+      "timestamp": "2026-01-01T23:32:10.940084"
+    },
+    {
+      "role": "user",
+      "content": "Nous recevons les commandes clients",
+      "timestamp": "2026-01-01T23:55:36.031483"
+    },
+    {
+      "role": "assistant",
+      "content": "J'ai identifié 3 activités principales :\n\n• Recevoir demande client\n• Vérifier disponibilité stock\n• Créer devis client\n\nVous pouvez modifier ces libellés ci-dessous si besoin, puis validez-les pour continuer.",
+      "timestamp": "2026-01-01T23:55:36.113065"
+    },
+    {
+      "role": "assistant",
+      "content": "Parfait ! Explorons maintenant chaque activité en détail. Commençons par 'Recevoir demande client'. Qu'est-ce qui déclenche l'activité 'Recevoir demande client' ?",
+      "timestamp": "2026-01-01T23:57:20.093687"
+    },
+    {
+      "role": "user",
+      "content": "C'est le client",
+      "timestamp": "2026-01-01T23:58:14.295361"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Recevoir demande client' ?",
+      "timestamp": "2026-01-01T23:58:14.295361"
+    },
+    {
+      "role": "user",
+      "content": "continuons",
+      "timestamp": "2026-01-02T00:00:23.649448"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles informations sont nécessaires pour réaliser 'Recevoir demande client' ?",
+      "timestamp": "2026-01-02T00:00:23.743011"
+    },
+    {
+      "role": "user",
+      "content": "La demande client",
+      "timestamp": "2026-01-02T00:06:10.849894"
+    },
+    {
+      "role": "assistant",
+      "content": "Qui réalise 'Recevoir demande client' ?",
+      "timestamp": "2026-01-02T00:06:17.934765"
+    },
+    {
+      "role": "user",
+      "content": "Le client",
+      "timestamp": "2026-01-02T00:06:26.803441"
+    },
+    {
+      "role": "assistant",
+      "content": "Y a-t-il des règles métier à respecter pour 'Recevoir demande client' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T00:06:39.061089"
+    },
+    {
+      "role": "user",
+      "content": "Si la demande client est vide, il faut notifier le client que sa demande est vide",
+      "timestamp": "2026-01-02T00:07:16.480809"
+    },
+    {
+      "role": "assistant",
+      "content": "Quand faut-il être alerté concernant 'Recevoir demande client' ? (Dites 'non' si jamais)",
+      "timestamp": "2026-01-02T00:07:31.577312"
+    },
+    {
+      "role": "user",
+      "content": "quand la demande client est reçue",
+      "timestamp": "2026-01-02T00:07:56.208317"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles sont les difficultés rencontrées avec 'Recevoir demande client' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T00:07:59.056754"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-02T00:08:23.870141"
+    },
+    {
+      "role": "assistant",
+      "content": "Très bien. Passons maintenant à 'Vérifier disponibilité stock'. Qu'est-ce qui déclenche l'activité 'Vérifier disponibilité stock' ?",
+      "timestamp": "2026-01-02T00:08:25.645064"
+    },
+    {
+      "role": "user",
+      "content": "fefesdf",
+      "timestamp": "2026-01-02T00:09:08.336576"
+    },
+    {
+      "role": "user",
+      "content": "fdsfd",
+      "timestamp": "2026-01-02T00:09:10.096562"
+    },
+    {
+      "role": "user",
+      "content": "dfdsfd",
+      "timestamp": "2026-01-02T00:09:11.026405"
+    },
+    {
+      "role": "user",
+      "content": "dfdsfd",
+      "timestamp": "2026-01-02T00:09:11.951226"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Vérifier disponibilité stock' ?",
+      "timestamp": "2026-01-02T00:09:13.941744"
+    },
+    {
+      "role": "user",
+      "content": "dfdsd",
+      "timestamp": "2026-01-02T00:09:16.935667"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles informations sont nécessaires pour réaliser 'Vérifier disponibilité stock' ?",
+      "timestamp": "2026-01-02T00:09:18.852472"
+    },
+    {
+      "role": "user",
+      "content": "numéro, date, client, issue",
+      "timestamp": "2026-01-02T00:09:40.617310"
+    },
+    {
+      "role": "assistant",
+      "content": "Qui réalise 'Vérifier disponibilité stock' ?",
+      "timestamp": "2026-01-02T00:09:42.653047"
+    },
+    {
+      "role": "user",
+      "content": "la conseillère",
+      "timestamp": "2026-01-02T00:09:58.427827"
+    },
+    {
+      "role": "assistant",
+      "content": "Y a-t-il des règles métier à respecter pour 'Vérifier disponibilité stock' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T00:10:00.501067"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-02T00:10:09.227572"
+    },
+    {
+      "role": "assistant",
+      "content": "Quand faut-il être alerté concernant 'Vérifier disponibilité stock' ? (Dites 'non' si jamais)",
+      "timestamp": "2026-01-02T00:10:26.153937"
+    },
+    {
+      "role": "user",
+      "content": "En cas de risque de retard",
+      "timestamp": "2026-01-02T00:11:39.699740"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles sont les difficultés rencontrées avec 'Vérifier disponibilité stock' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T00:11:41.646681"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-02T00:11:50.143868"
+    },
+    {
+      "role": "assistant",
+      "content": "Très bien. Passons maintenant à 'Créer devis client'. Qu'est-ce qui déclenche l'activité 'Créer devis client' ?",
+      "timestamp": "2026-01-02T00:11:51.942294"
+    },
+    {
+      "role": "user",
+      "content": "Le vendeur",
+      "timestamp": "2026-01-02T00:12:04.558472"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Créer devis client' ?",
+      "timestamp": "2026-01-02T00:12:20.284950"
+    },
+    {
+      "role": "user",
+      "content": "Un devis",
+      "timestamp": "2026-01-02T00:14:31.512668"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles informations sont nécessaires pour réaliser 'Créer devis client' ?",
+      "timestamp": "2026-01-02T00:14:38.322354"
+    },
+    {
+      "role": "user",
+      "content": "Nom, produit, quantité, prix, promotions",
+      "timestamp": "2026-01-02T00:14:57.407167"
+    },
+    {
+      "role": "assistant",
+      "content": "Qui réalise 'Créer devis client' ?",
+      "timestamp": "2026-01-02T00:15:05.605645"
+    },
+    {
+      "role": "user",
+      "content": "Le vendeur",
+      "timestamp": "2026-01-02T00:15:32.098473"
+    },
+    {
+      "role": "assistant",
+      "content": "Y a-t-il des règles métier à respecter pour 'Créer devis client' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T00:15:41.199222"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-02T00:15:50.037427"
+    },
+    {
+      "role": "assistant",
+      "content": "Quand faut-il être alerté concernant 'Créer devis client' ? (Dites 'non' si jamais)",
+      "timestamp": "2026-01-02T00:15:53.123905"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-02T00:15:59.713343"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles sont les difficultés rencontrées avec 'Créer devis client' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T00:16:01.389962"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-02T00:16:07.452231"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent ! Nous avons capturé toutes les informations. Voici la synthèse complète de votre processus. Vous pouvez maintenant l'enrichir, le modifier ou le valider.",
+      "timestamp": "2026-01-02T00:16:08.697361"
+    }
+  ],
+  "status": "submitted",
+  "submitted_at": "2026-01-02T00:19:38.803922"
+}

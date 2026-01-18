@@ -1,0 +1,150 @@
+{
+  "id": "37586ef4-551a-462e-b6c6-602a50105cad",
+  "created_at": "2026-01-01T17:36:57.140567",
+  "updated_at": "2026-01-01T22:41:05.522531",
+  "perimeter": "Gestion de la relation client",
+  "objective": "Optimisation de la création des nouvelles offres",
+  "activities": [
+    {
+      "id": "1bd329f4-f4a7-4ff3-9d4a-8b9bf98468a6",
+      "label": "Gérer le catalogue d'offres",
+      "description": "",
+      "parent_id": null,
+      "children_ids": [
+        "46eb1255-9513-4c24-a514-1523d46f87a5",
+        "f5c33ab2-10e7-4ab7-a9e6-feb5da5b43da",
+        "89336b40-a93f-404d-b948-802db27aefa5"
+      ],
+      "level": 1,
+      "who": [],
+      "tools": [],
+      "inputs": null,
+      "outputs": null,
+      "order": 0,
+      "duration_estimate": null,
+      "frequency": null
+    },
+    {
+      "id": "46eb1255-9513-4c24-a514-1523d46f87a5",
+      "label": "Créer une nouvelle offre",
+      "description": "",
+      "parent_id": "1bd329f4-f4a7-4ff3-9d4a-8b9bf98468a6",
+      "children_ids": [],
+      "level": 2,
+      "who": [],
+      "tools": [],
+      "inputs": null,
+      "outputs": null,
+      "order": 0,
+      "duration_estimate": null,
+      "frequency": null
+    },
+    {
+      "id": "f5c33ab2-10e7-4ab7-a9e6-feb5da5b43da",
+      "label": "Mettre à jour une nouvelle offre",
+      "description": "",
+      "parent_id": "1bd329f4-f4a7-4ff3-9d4a-8b9bf98468a6",
+      "children_ids": [],
+      "level": 2,
+      "who": [],
+      "tools": [],
+      "inputs": null,
+      "outputs": null,
+      "order": 1,
+      "duration_estimate": null,
+      "frequency": null
+    },
+    {
+      "id": "89336b40-a93f-404d-b948-802db27aefa5",
+      "label": "Mettre à jour les prix des offres",
+      "description": "",
+      "parent_id": "1bd329f4-f4a7-4ff3-9d4a-8b9bf98468a6",
+      "children_ids": [],
+      "level": 2,
+      "who": [],
+      "tools": [],
+      "inputs": null,
+      "outputs": null,
+      "order": 2,
+      "duration_estimate": null,
+      "frequency": null
+    },
+    {
+      "id": "4806bd31-a71b-48d8-baff-13fe474b1f3e",
+      "label": "Proposer une offre au client",
+      "description": "",
+      "parent_id": null,
+      "children_ids": [
+        "00087798-96ef-4412-9a07-7b3211f3fc2f",
+        "7e38e9bd-47d3-477e-9936-9f92cf0a4c22"
+      ],
+      "level": 1,
+      "who": [],
+      "tools": [],
+      "inputs": null,
+      "outputs": null,
+      "order": 4,
+      "duration_estimate": null,
+      "frequency": null
+    },
+    {
+      "id": "00087798-96ef-4412-9a07-7b3211f3fc2f",
+      "label": "Identifier le PDL du client",
+      "description": "",
+      "parent_id": "4806bd31-a71b-48d8-baff-13fe474b1f3e",
+      "children_ids": [],
+      "level": 2,
+      "who": [],
+      "tools": [],
+      "inputs": null,
+      "outputs": null,
+      "order": 0,
+      "duration_estimate": null,
+      "frequency": null
+    },
+    {
+      "id": "7e38e9bd-47d3-477e-9936-9f92cf0a4c22",
+      "label": "Estimer la consommation du client",
+      "description": "",
+      "parent_id": "4806bd31-a71b-48d8-baff-13fe474b1f3e",
+      "children_ids": [],
+      "level": 2,
+      "who": [],
+      "tools": [],
+      "inputs": null,
+      "outputs": null,
+      "order": 1,
+      "duration_estimate": null,
+      "frequency": null
+    }
+  ],
+  "flows": [
+    {
+      "id": "4dfc2f25-3511-4463-9ae5-4e5052ecf77b",
+      "source_activity_id": "1bd329f4-f4a7-4ff3-9d4a-8b9bf98468a6",
+      "target_activity_id": "4806bd31-a71b-48d8-baff-13fe474b1f3e",
+      "type": "EN_PARALLELE",
+      "condition": null
+    }
+  ],
+  "actors": [
+    {
+      "id": "3e230f41-18fd-44c6-a40d-d037466ac818",
+      "name": "Conseiller clientèle",
+      "type": "personne",
+      "role": "",
+      "activities": []
+    },
+    {
+      "id": "d33b6508-33b0-43ab-ad92-01cc3306afe4",
+      "name": "Kaluza",
+      "type": "systeme",
+      "role": "CRM",
+      "activities": []
+    }
+  ],
+  "pain_points": [],
+  "domains": [],
+  "status": "submitted",
+  "submitted_at": "2026-01-01T17:50:03.251186"
+}

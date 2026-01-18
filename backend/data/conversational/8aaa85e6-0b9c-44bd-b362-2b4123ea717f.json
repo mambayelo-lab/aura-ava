@@ -1,0 +1,26 @@
+{
+  "id": "8aaa85e6-0b9c-44bd-b362-2b4123ea717f",
+  "created_at": "2026-01-01T22:43:15.382795",
+  "updated_at": "2026-01-01T22:43:15.382795",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [],
+  "business_objects": [],
+  "actors": [],
+  "rules": [],
+  "signals": [],
+  "pain_points": [],
+  "current_phase": "discovery",
+  "current_activity_index": 0,
+  "current_question_index": 0,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Je suis votre consultant AURA. Pouvez-vous me décrire votre processus métier ? Commencez par le début, et racontez-moi naturellement ce qui se passe.",
+      "timestamp": "2026-01-01T22:43:15.382795"
+    }
+  ],
+  "status": "draft",
+  "submitted_at": null
+}

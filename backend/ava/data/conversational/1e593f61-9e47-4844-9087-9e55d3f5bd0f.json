@@ -1,0 +1,100 @@
+{
+  "id": "1e593f61-9e47-4844-9087-9e55d3f5bd0f",
+  "created_at": "2026-01-18T10:11:20.512704",
+  "updated_at": "2026-01-18T10:19:56.293367",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [
+    {
+      "id": "act_0_0",
+      "label": "Recevoir une commande client",
+      "description": null,
+      "validated": true,
+      "trigger_event": "Demande client",
+      "trigger_actor": "Client",
+      "trigger_actor_type": "personne",
+      "trigger_system": "Messagerie",
+      "output_object": "obj_0",
+      "output_system": "CRM",
+      "performed_by": null,
+      "performed_by_type": null,
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    }
+  ],
+  "business_objects": [
+    {
+      "id": "obj_0",
+      "name": "Commande",
+      "attributes": [],
+      "created_by_activity": "act_0_0",
+      "used_by_activities": [],
+      "source_system": "CRM"
+    }
+  ],
+  "actors": [],
+  "rules": [],
+  "signals": [],
+  "pain_points": [],
+  "current_phase": "completed",
+  "current_activity_index": 0,
+  "current_question_index": 3,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Communiquez-moi en premier vos activités, dans l'ordre. Est-ce que cela vous convient?",
+      "timestamp": "2026-01-18T10:11:20.512704"
+    },
+    {
+      "role": "assistant",
+      "content": "Parfait ! Veuillez maintenant saisir vos activités dans l'ordre. Vous pouvez utiliser les exemples comme guide.",
+      "timestamp": "2026-01-18T10:12:00.787592"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent ! Nous avons 1 activités. Commençons par approfondir 'Recevoir une commande client'. Qu'est-ce qui déclenche l'activité 'Recevoir une commande client' ?",
+      "timestamp": "2026-01-18T10:13:05.108591"
+    },
+    {
+      "role": "user",
+      "content": "Le placement de la commande",
+      "timestamp": "2026-01-18T10:13:42.974416"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Recevoir une commande client' ?",
+      "timestamp": "2026-01-18T10:14:37.247560"
+    },
+    {
+      "role": "user",
+      "content": "La commande est validée par le SCO",
+      "timestamp": "2026-01-18T10:16:01.838696"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles informations sont nécessaires pour réaliser 'Recevoir une commande client' ?",
+      "timestamp": "2026-01-18T10:16:36.111811"
+    },
+    {
+      "role": "user",
+      "content": "La quantitié et les produits concernés",
+      "timestamp": "2026-01-18T10:17:31.707758"
+    },
+    {
+      "role": "assistant",
+      "content": "Qui ou quel système réalise 'Recevoir une commande client' ? (Indiquez si c'est une personne, une équipe ou un système)",
+      "timestamp": "2026-01-18T10:17:52.465828"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-18T10:18:41.024615"
+    }
+  ],
+  "status": "completed",
+  "submitted_at": null,
+  "notes_to_architects": ""
+}

@@ -1,0 +1,136 @@
+{
+  "id": "bbd823cc-cb94-474e-9bae-114cd9809a3e",
+  "created_at": "2026-01-08T22:24:50.235410",
+  "updated_at": "2026-01-08T22:30:58.217522",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [
+    {
+      "id": "act_0_0",
+      "label": "Recevoir demande Client",
+      "description": null,
+      "validated": true,
+      "trigger_event": "Le Supply Chain Organizer",
+      "trigger_actor": "Le Supply Chain Organizer",
+      "trigger_actor_type": "personne",
+      "trigger_system": "Octopus",
+      "output_object": "obj_0",
+      "output_system": "Octopus",
+      "performed_by": null,
+      "performed_by_type": null,
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    },
+    {
+      "id": "act_1_1",
+      "label": "Vérifier le stoclk disponible",
+      "description": null,
+      "validated": true,
+      "trigger_event": null,
+      "trigger_actor": null,
+      "trigger_actor_type": null,
+      "trigger_system": null,
+      "output_object": null,
+      "output_system": null,
+      "performed_by": null,
+      "performed_by_type": null,
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    },
+    {
+      "id": "act_2_2",
+      "label": "Exécuter une commande fournisseurs",
+      "description": null,
+      "validated": true,
+      "trigger_event": null,
+      "trigger_actor": null,
+      "trigger_actor_type": null,
+      "trigger_system": null,
+      "output_object": null,
+      "output_system": null,
+      "performed_by": null,
+      "performed_by_type": null,
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    }
+  ],
+  "business_objects": [
+    {
+      "id": "obj_0",
+      "name": "Commande",
+      "attributes": [],
+      "created_by_activity": "act_0_0",
+      "used_by_activities": [],
+      "source_system": "Octopus"
+    }
+  ],
+  "actors": [],
+  "rules": [],
+  "signals": [],
+  "pain_points": [],
+  "current_phase": "completed",
+  "current_activity_index": 0,
+  "current_question_index": 3,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Communiquez-moi en premier vos activités, dans l'ordre. Est-ce que cela vous convient?",
+      "timestamp": "2026-01-08T22:24:50.235410"
+    },
+    {
+      "role": "assistant",
+      "content": "Parfait ! Veuillez maintenant saisir vos activités dans l'ordre. Vous pouvez utiliser les exemples comme guide.",
+      "timestamp": "2026-01-08T22:25:21.926643"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent ! Nous avons 3 activités. Commençons par approfondir 'Recevoir demande Client'. Qu'est-ce qui déclenche l'activité 'Recevoir demande Client' ?",
+      "timestamp": "2026-01-08T22:27:11.932644"
+    },
+    {
+      "role": "user",
+      "content": "Le Supply Chain Organizer",
+      "timestamp": "2026-01-08T22:27:51.544545"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Recevoir demande Client' ?",
+      "timestamp": "2026-01-08T22:28:20.042675"
+    },
+    {
+      "role": "user",
+      "content": "Commande client validée",
+      "timestamp": "2026-01-08T22:28:50.648171"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles informations sont nécessaires pour réaliser 'Recevoir demande Client' ?",
+      "timestamp": "2026-01-08T22:29:01.648003"
+    },
+    {
+      "role": "user",
+      "content": "Produits et quantités",
+      "timestamp": "2026-01-08T22:29:30.546842"
+    },
+    {
+      "role": "assistant",
+      "content": "Qui ou quel système réalise 'Recevoir demande Client' ? (Indiquez si c'est une personne, une équipe ou un système)",
+      "timestamp": "2026-01-08T22:29:48.361270"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-08T22:30:58.217522"
+    }
+  ],
+  "status": "completed",
+  "submitted_at": null,
+  "notes_to_architects": ""
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01ea0b15-38fc-41c8-95eb-0c36f11f65ad",
+  "created_at": "2026-01-01T23:24:04.274789",
+  "updated_at": "2026-01-01T23:24:04.274789",
+  "perimeter": "",
+  "objective": "",
+  "mode": "decision",
+  "activities": [],
+  "business_objects": [],
+  "actors": [],
+  "rules": [],
+  "signals": [],
+  "pain_points": [],
+  "current_phase": "discovery",
+  "current_activity_index": 0,
+  "current_question_index": 0,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Quelle décision devez-vous prendre régulièrement ? Racontez-moi comment ça se passe.",
+      "timestamp": "2026-01-01T23:24:04.274789"
+    }
+  ],
+  "status": "draft",
+  "submitted_at": null
+}

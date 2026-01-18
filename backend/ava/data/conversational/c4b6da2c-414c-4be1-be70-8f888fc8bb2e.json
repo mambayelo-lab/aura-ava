@@ -1,0 +1,61 @@
+{
+  "id": "c4b6da2c-414c-4be1-be70-8f888fc8bb2e",
+  "created_at": "2026-01-03T18:47:42.956840",
+  "updated_at": "2026-01-03T18:48:29.097358",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [
+    {
+      "id": "act_0_0",
+      "label": "Facturer le client",
+      "description": null,
+      "validated": true,
+      "trigger_event": null,
+      "trigger_actor": null,
+      "trigger_actor_type": null,
+      "trigger_system": null,
+      "output_object": null,
+      "output_system": null,
+      "performed_by": null,
+      "performed_by_type": null,
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    }
+  ],
+  "business_objects": [],
+  "actors": [],
+  "rules": [],
+  "signals": [],
+  "pain_points": [],
+  "current_phase": "deep_dive",
+  "current_activity_index": 0,
+  "current_question_index": 0,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Communiquez-moi en premier vos activités, dans l'ordre. Est-ce que cela vous convient?",
+      "timestamp": "2026-01-03T18:47:42.956840"
+    },
+    {
+      "role": "assistant",
+      "content": "Parfait ! Veuillez maintenant saisir vos activités dans l'ordre. Vous pouvez utiliser les exemples comme guide.",
+      "timestamp": "2026-01-03T18:47:45.930991"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent ! Nous avons 1 activités. Commençons par approfondir 'Facturer le client'. Qu'est-ce qui déclenche l'activité 'Facturer le client' ?",
+      "timestamp": "2026-01-03T18:47:57.955555"
+    },
+    {
+      "role": "user",
+      "content": "signature du contrat",
+      "timestamp": "2026-01-03T18:48:29.097358"
+    }
+  ],
+  "status": "draft",
+  "submitted_at": null,
+  "notes_to_architects": ""
+}

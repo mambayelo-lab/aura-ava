@@ -1,88 +1,57 @@
+"""Point d'entrée FastAPI pour AURA AVA V3"""
 from fastapi import FastAPI
-from pydantic import BaseModel, Field
-from typing import Optional, List, Dict, Any
-import uuid
+from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
+import os
 
-app = FastAPI(title="AVA v0 - 7Q Compiler", version="0.1.0")
+# Charger les variables d'environnement depuis .env
+load_dotenv()
 
-# ---------- Models ----------
-class InterviewState(BaseModel):
-    actor: Optional[str] = None
-    system: Optional[str] = None
-    command: Optional[str] = None
-    event: Optional[str] = None
-    reaction: Optional[str] = None
-    visibility: Optional[str] = None
-    dependency: Optional[str] = None
+from ava.api import interview, ontology, compilation, mapping, fact_resolution, ops_dashboard, llm_assist, decision_interview, transforming_interview, architect_workspace, conversational_interview
+from ava.db.neo4j import neo4j_conn
 
-class CompileResponse(BaseModel):
-    ok: bool
-    missing_step: Optional[str] = None
-    compiled: Dict[str, Any] = Field(default_factory=dict)
-    hints: List[str] = Field(default_factory=list)
+app = FastAPI(
+    title="AURA AVA V3",
+    description="Architecture Vision Assistant - Decision Intelligence Platform",
+    version="3.0.0"
+)
 
+# CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # Frontend Next.js
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-# ---------- Helpers ----------
-QUESTIONS_ORDER = ["actor", "system", "command", "event", "reaction", "visibility", "dependency"]
+# Routes
+app.include_router(interview.router, prefix="/api/interview", tags=["Interview"])
+app.include_router(ontology.router, prefix="/api/ontology", tags=["Ontology"])
+app.include_router(compilation.router, prefix="/api/compilation", tags=["Compilation"])
+app.include_router(mapping.router, prefix="/api/mapping", tags=["Mapping"])
+app.include_router(fact_resolution.router, tags=["Fact Resolution"])
+app.include_router(ops_dashboard.router, tags=["Ops Dashboard"])
+app.include_router(llm_assist.router, tags=["LLM Assistance"])
+app.include_router(decision_interview.router, tags=["Decision Interview"])
+app.include_router(transforming_interview.router, tags=["Transforming Interview"])
+app.include_router(architect_workspace.router, tags=["Architect Workspace"])
+app.include_router(conversational_interview.router, tags=["Conversational Interview"])
 
-EXAMPLES = {
-    "actor": "ex : Gestionnaire commandes",
-    "system": "ex : ERP SAP / CRM Salesforce / WMS Manhattan",
-    "command": "ex : Créer commande",
-    "event": "ex : Commande créée",
-    "reaction": "ex : Allocation stock",
-    "visibility": "ex : Logistique – temps réel",
-    "dependency": "ex : Livraison dépend de commande créée",
-}
+@app.get("/")
+def root():
+    return {"message": "AURA AVA V3 API", "status": "running"}
 
-def next_missing_step(state: InterviewState) -> Optional[str]:
-    for step in QUESTIONS_ORDER:
-        if getattr(state, step) in (None, ""):
-            return step
-    return None
+@app.get("/health")
+def health():
+    """Health check avec test Neo4j"""
+    try:
+        is_connected = neo4j_conn.test_connection()
+        return {"status": "healthy", "neo4j": is_connected}
+    except Exception as e:
+        return {"status": "unhealthy", "neo4j": False, "error": str(e)}
 
-def validate(state: InterviewState) -> List[str]:
-    hints = []
-    # Minimal validations (beginner-friendly)
-    if state.command and " " not in state.command.strip():
-        hints.append("Commande: utilise un verbe + objet (ex: 'Créer commande').")
-    if state.event and " " not in state.event.strip():
-        hints.append("Événement: décris un fait observable (ex: 'Commande créée').")
-    return hints
-
-def compile_state(state: InterviewState) -> Dict[str, Any]:
-    # Compiled AST-like structure (ABP-ready)
-    def node(t: str, value: Optional[str], step: str) -> Dict[str, Any]:
-        return {"id": f"{t.lower()}_{uuid.uuid4().hex[:8]}", "type": t, "label": value or "", "step": step}
-
-    compiled = {
-        "actor": node("Actor", state.actor, "actor"),
-        "system": node("System", state.system, "system"),
-        "command": node("Command", state.command, "command"),
-        "event": node("Event", state.event, "event"),
-        "reaction": node("Reaction", state.reaction, "reaction"),
-        "visibility": node("Visibility", state.visibility, "visibility"),
-        "dependency": node("Dependency", state.dependency, "dependency"),
-        "capabilities": [],         # v0: empty; will be inferred later
-        "signal_candidates": [],    # v0: empty; will be inferred later
-    }
-    return compiled
-
-
-# ---------- Routes ----------
-@app.get("/examples")
-def get_examples() -> Dict[str, str]:
-    return EXAMPLES
-
-@app.post("/compile", response_model=CompileResponse)
-def compile_endpoint(state: InterviewState):
-    missing = next_missing_step(state)
-    hints = validate(state)
-
-    compiled = compile_state(state)  # even partial, for live right-pane rendering
-    return CompileResponse(
-        ok=(missing is None and len(hints) == 0),
-        missing_step=missing,
-        compiled=compiled,
-        hints=hints,
-    )
+@app.on_event("shutdown")
+def shutdown():
+    """Fermeture propre de la connexion Neo4j"""
+    neo4j_conn.close()

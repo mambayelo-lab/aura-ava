@@ -1,0 +1,19 @@
+{
+  "nodes": [
+    {
+      "id": "fact_0",
+      "type": "fact",
+      "label": "seereryhebgfh",
+      "data": {
+        "origin": "decision_interview",
+        "source": {
+          "system": "Manual Entry",
+          "type": "manual",
+          "status": "pending_validation"
+        },
+        "status": "pending_validation"
+      }
+    }
+  ],
+  "edges": []
+}

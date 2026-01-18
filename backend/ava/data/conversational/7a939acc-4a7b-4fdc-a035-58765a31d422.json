@@ -1,0 +1,208 @@
+{
+  "id": "7a939acc-4a7b-4fdc-a035-58765a31d422",
+  "created_at": "2026-01-02T11:10:26.519867",
+  "updated_at": "2026-01-02T11:21:32.644093",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [
+    {
+      "id": "act_0_0",
+      "label": "Estimer la consommation",
+      "description": null,
+      "validated": true,
+      "trigger_event": "Demande de devis client",
+      "trigger_actor": "Client",
+      "trigger_actor_type": "personne",
+      "trigger_system": "Site web",
+      "output_object": "obj_0",
+      "output_system": "CRM",
+      "performed_by": "actor_0",
+      "performed_by_type": "personne",
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    },
+    {
+      "id": "act_1_1",
+      "label": "Proposer une offre d'énergie",
+      "description": null,
+      "validated": true,
+      "trigger_event": null,
+      "trigger_actor": null,
+      "trigger_actor_type": null,
+      "trigger_system": null,
+      "output_object": null,
+      "output_system": null,
+      "performed_by": null,
+      "performed_by_type": null,
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    }
+  ],
+  "business_objects": [
+    {
+      "id": "obj_0",
+      "name": "Devis",
+      "attributes": [
+        "numéro",
+        "date",
+        "client",
+        "Numéro",
+        "Date",
+        "Client",
+        "Montant",
+        "Statut"
+      ],
+      "created_by_activity": "act_0_0",
+      "used_by_activities": [],
+      "source_system": "CRM"
+    }
+  ],
+  "actors": [
+    {
+      "id": "actor_0",
+      "name": "Conseiller Client",
+      "type": "personne",
+      "role": null,
+      "activities": [
+        "act_0_0"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule_0",
+      "condition": "Si le devis dépasse 1000 euros par mois",
+      "action": "Annuler le devis",
+      "type": "SI_ALORS",
+      "applies_to_activity": "act_0_0",
+      "applies_to_object": null
+    }
+  ],
+  "signals": [
+    {
+      "id": "signal_0",
+      "event": "Quand le client a confirmé son adresse et PDL",
+      "action": "Lui transmettre l'offre",
+      "severity": "MEDIUM",
+      "threshold": null,
+      "applies_to_activity": "act_0_0"
+    }
+  ],
+  "pain_points": [
+    {
+      "id": "pain_0",
+      "description": "RAS",
+      "impact": "temps_perdu",
+      "severity": "MEDIUM",
+      "related_activity": "act_0_0"
+    }
+  ],
+  "current_phase": "completed",
+  "current_activity_index": 1,
+  "current_question_index": 0,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Communiquez-moi en premier vos activités, dans l'ordre. Est-ce que cela vous convient?",
+      "timestamp": "2026-01-02T11:10:26.519867"
+    },
+    {
+      "role": "assistant",
+      "content": "Parfait ! Veuillez maintenant saisir vos activités dans l'ordre. Vous pouvez utiliser les exemples comme guide.",
+      "timestamp": "2026-01-02T11:12:41.111431"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent ! Nous avons 2 activités. Commençons par approfondir 'Estimer la consommation'. Qu'est-ce qui déclenche l'activité 'Estimer la consommation' ?",
+      "timestamp": "2026-01-02T11:15:06.795031"
+    },
+    {
+      "role": "user",
+      "content": "Le client",
+      "timestamp": "2026-01-02T11:15:22.861636"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Estimer la consommation' ?",
+      "timestamp": "2026-01-02T11:15:49.646466"
+    },
+    {
+      "role": "user",
+      "content": "Devis créé",
+      "timestamp": "2026-01-02T11:16:18.395800"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles informations sont nécessaires pour réaliser 'Estimer la consommation' ?",
+      "timestamp": "2026-01-02T11:16:38.654525"
+    },
+    {
+      "role": "user",
+      "content": "PDL, consommations antérieures",
+      "timestamp": "2026-01-02T11:17:15.756301"
+    },
+    {
+      "role": "assistant",
+      "content": "Qui réalise 'Estimer la consommation' ?",
+      "timestamp": "2026-01-02T11:17:22.896521"
+    },
+    {
+      "role": "user",
+      "content": "Le site web",
+      "timestamp": "2026-01-02T11:17:38.900061"
+    },
+    {
+      "role": "assistant",
+      "content": "Y a-t-il des règles métier à respecter pour 'Estimer la consommation' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T11:17:54.765043"
+    },
+    {
+      "role": "user",
+      "content": "Si le devis dépasse 1000 euros par moi, il faut annuler le devis",
+      "timestamp": "2026-01-02T11:18:34.245122"
+    },
+    {
+      "role": "assistant",
+      "content": "Quand faut-il être alerté concernant 'Estimer la consommation' ? (Dites 'non' si jamais)",
+      "timestamp": "2026-01-02T11:19:02.254314"
+    },
+    {
+      "role": "user",
+      "content": "Une fois que le client a confirmé son adresse et PDL",
+      "timestamp": "2026-01-02T11:19:38.533381"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles sont les difficultés rencontrées avec 'Estimer la consommation' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T11:20:11.992119"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-02T11:20:19.549134"
+    },
+    {
+      "role": "assistant",
+      "content": "Très bien. Passons maintenant à 'Proposer une offre d'énergie'. Qu'est-ce qui déclenche l'activité 'Proposer une offre d'énergie' ?",
+      "timestamp": "2026-01-02T11:20:39.799887"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-02T11:21:26.631172"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-02T11:21:32.644093"
+    }
+  ],
+  "status": "completed",
+  "submitted_at": null,
+  "notes_to_architects": ""
+}

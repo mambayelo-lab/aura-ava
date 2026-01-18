@@ -1,0 +1,38 @@
+{
+  "id": "2e566d45-4ffd-44c8-955c-44a33f4eab2b",
+  "created_at": "2026-01-01T05:17:04.904151",
+  "updated_at": "2026-01-01T05:21:08.054607",
+  "decision": "Choisir un fournisseur",
+  "context": "Délais de réponse court",
+  "infos": [
+    {
+      "id": "fff02fde-85ab-437a-aac5-9b7ff92e5016",
+      "label": "Montant de la commande",
+      "source": "erp"
+    },
+    {
+      "id": "cfcb45cb-df63-47dc-bf64-bb191a564f07",
+      "label": "Délais de livraison",
+      "source": "crm"
+    }
+  ],
+  "rules": [
+    {
+      "id": "455895c7-1c9b-4a33-a5f8-d565a7763b61",
+      "type": "SI_ALORS",
+      "condition": "montant > 1000 euros",
+      "consequence": "Retard de paiement"
+    }
+  ],
+  "signals": [
+    {
+      "id": "9e996464-f80e-4c44-9a2b-58bf3094c84d",
+      "event": "délais dépassé de 2 jours",
+      "action": "Alerter manager",
+      "severity": "MEDIUM"
+    }
+  ],
+  "risks": "Risque de surcout",
+  "status": "submitted",
+  "submitted_at": "2026-01-02T03:41:24.302773"
+}

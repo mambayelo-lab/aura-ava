@@ -1,0 +1,397 @@
+[
+  {
+    "id": "77dde7ca-22b4-4499-b16d-1ae863d33d42",
+    "title": "Interview Aide à la Décision",
+    "type": "decision",
+    "context": {
+      "objective": "Structurer la prise de décision",
+      "motivation": null,
+      "constraints": [],
+      "decision_focus": null,
+      "editable_by_interviewee": true,
+      "interviewee_comments": null
+    },
+    "decisions": [
+      {
+        "id": "f1792da4-fc85-40c8-b88b-59ec2d3a327b",
+        "label": "Dois je investir dans ce projet",
+        "description": "Contrexte MLO",
+        "required_facts": [
+          {
+            "id": "9a74e80e-de32-4aa7-b3d9-d4cdfdf08e16",
+            "label": "CA prévisionnel",
+            "source_type": "unknown",
+            "source_activity_id": null,
+            "source_application_id": null,
+            "description": ""
+          },
+          {
+            "id": "37082b7a-f42e-47f8-95ce-6513ad78df8e",
+            "label": "Date d'expédition",
+            "source_type": "unknown",
+            "source_activity_id": null,
+            "source_application_id": null,
+            "description": ""
+          }
+        ],
+        "rules": [],
+        "signals": [],
+        "pain_points": []
+      }
+    ],
+    "processes": [],
+    "inventory": {
+      "actors": [],
+      "applications": [],
+      "data_objects": [],
+      "signals": []
+    },
+    "validation": {
+      "completeness_score": 0,
+      "validated_by_user": false
+    },
+    "created_at": "2025-12-31T22:07:53.236000+00:00",
+    "updated_at": "2025-12-31T23:33:15.694086"
+  },
+  {
+    "id": "9e3e26e1-3ae0-4304-9aa5-029ebdf6a528",
+    "title": "Interview Aide à la Décision",
+    "type": "decision",
+    "context": {
+      "objective": "Structurer la prise de décision",
+      "motivation": null,
+      "constraints": [],
+      "decision_focus": null,
+      "editable_by_interviewee": true,
+      "interviewee_comments": null
+    },
+    "decisions": [
+      {
+        "id": "ade5a5a1-cb56-4dab-820a-b3d1daf6e2f5",
+        "label": "zzazezrz",
+        "description": "erzerzerzer96",
+        "required_facts": [
+          {
+            "id": "47a2b967-a5a4-43f8-af3c-34e4792b3034",
+            "label": "zezearerezaze",
+            "source_type": "system",
+            "source_activity_id": null,
+            "source_application_id": null,
+            "description": "zzerea"
+          }
+        ],
+        "rules": [
+          {
+            "id": "c2354694-f7ae-47f1-a0af-a7ce817cb41e",
+            "type": "if_then",
+            "condition": "zezaezezaeza",
+            "consequence": "eaze"
+          },
+          {
+            "id": "033d2766-86da-4d6e-b489-8a1e16bbea0a",
+            "type": "while",
+            "condition": "zezaez",
+            "consequence": "zzeaz"
+          }
+        ],
+        "signals": [],
+        "pain_points": []
+      }
+    ],
+    "processes": [],
+    "inventory": {
+      "actors": [],
+      "applications": [],
+      "data_objects": [],
+      "signals": []
+    },
+    "validation": {
+      "completeness_score": 0,
+      "validated_by_user": false
+    },
+    "created_at": "2026-01-01T00:10:35.551000+00:00",
+    "updated_at": "2026-01-01T01:13:00.956911"
+  },
+  {
+    "id": "13f872ae-236e-4fdb-b1cc-9c67a97e509e",
+    "title": "Interview Aide à la Décision",
+    "type": "decision",
+    "context": {
+      "objective": "Structurer la prise de décision",
+      "motivation": null,
+      "constraints": [],
+      "decision_focus": null,
+      "editable_by_interviewee": true,
+      "interviewee_comments": null
+    },
+    "decisions": [
+      {
+        "id": "2a72ce1e-658d-4b8b-9cfd-f969b5ca2e9e",
+        "label": "xcvxvh,gh,",
+        "description": "fbdfhbfghfjgnf",
+        "required_facts": [
+          {
+            "id": "b207786f-203e-4c7a-a8e2-7fcc6627bc4a",
+            "label": "seereryhebgfh",
+            "source_type": "system",
+            "source_activity_id": null,
+            "source_application_id": null,
+            "description": "xbdfhd"
+          }
+        ],
+        "rules": [
+          {
+            "id": "d49bc06e-faaa-4c19-9639-8766f378e09b",
+            "type": "while",
+            "condition": "xdfhtrfhfgj",
+            "consequence": "hfgg"
+          },
+          {
+            "id": "c9e6d99e-8bf9-4ff7-9611-a59e044b76f3",
+            "type": "if_then",
+            "condition": "bfhfxg",
+            "consequence": "fdhfgh"
+          },
+          {
+            "id": "1a6cce29-afe8-40fb-a890-36ba507f97c9",
+            "type": "if_then",
+            "condition": "ffdfgh",
+            "consequence": "gfngfnf"
+          }
+        ],
+        "signals": [],
+        "pain_points": []
+      }
+    ],
+    "processes": [],
+    "inventory": {
+      "actors": [],
+      "applications": [],
+      "data_objects": [],
+      "signals": []
+    },
+    "validation": {
+      "completeness_score": 0,
+      "validated_by_user": true,
+      "submitted_at": "2026-01-01T01:27:05.326178"
+    },
+    "created_at": "2026-01-01T00:17:11.508000+00:00",
+    "updated_at": "2026-01-01T01:27:05.326178"
+  },
+  {
+    "id": "13a1673a-75bf-441d-b669-58bd19d05f17",
+    "title": "Interview Aide à la Décision",
+    "type": "decision",
+    "context": {
+      "objective": "Structurer la prise de décision",
+      "motivation": null,
+      "constraints": [],
+      "decision_focus": null,
+      "editable_by_interviewee": true,
+      "interviewee_comments": null
+    },
+    "decisions": [
+      {
+        "id": "4d3bb238-8aa5-4902-9500-7d98502ec64c",
+        "label": "Commande",
+        "description": "Commande",
+        "required_facts": [
+          {
+            "id": "90276e97-2679-4457-b665-324c05b15b45",
+            "label": "Montant",
+            "source_type": "manual",
+            "source_activity_id": null,
+            "source_application_id": null,
+            "description": "crm"
+          },
+          {
+            "id": "7922d3d7-ab9e-4dc6-a9f2-02e892e6e24f",
+            "label": "Livraison",
+            "source_type": "system",
+            "source_activity_id": null,
+            "source_application_id": null,
+            "description": "ERP"
+          }
+        ],
+        "rules": [],
+        "signals": [],
+        "pain_points": []
+      }
+    ],
+    "processes": [],
+    "inventory": {
+      "actors": [],
+      "applications": [],
+      "data_objects": [],
+      "signals": []
+    },
+    "validation": {
+      "completeness_score": 0,
+      "validated_by_user": false
+    },
+    "created_at": "2026-01-01T01:21:02.259000+00:00",
+    "updated_at": "2026-01-01T04:51:22.684573"
+  },
+  {
+    "id": "cfbb3ad3-eab2-4f10-b974-ef049f92255d",
+    "title": "Interview Aide à la Décision",
+    "type": "decision",
+    "context": {
+      "objective": "Structurer la prise de décision",
+      "motivation": null,
+      "constraints": [],
+      "decision_focus": null,
+      "editable_by_interviewee": true,
+      "interviewee_comments": null
+    },
+    "decisions": [],
+    "processes": [],
+    "inventory": {
+      "actors": [],
+      "applications": [],
+      "data_objects": [],
+      "signals": []
+    },
+    "validation": {
+      "completeness_score": 0,
+      "validated_by_user": false
+    },
+    "created_at": "2026-01-01T04:34:38.195000+00:00",
+    "updated_at": "2026-01-01T04:34:38.196000+00:00"
+  },
+  {
+    "id": "f859f8de-ee37-45a5-ab78-3f57a70f3c6d",
+    "title": "Interview Aide à la Décision",
+    "type": "decision",
+    "context": {
+      "objective": "Structurer la prise de décision",
+      "motivation": null,
+      "constraints": [],
+      "decision_focus": null,
+      "editable_by_interviewee": true,
+      "interviewee_comments": null
+    },
+    "decisions": [],
+    "processes": [],
+    "inventory": {
+      "actors": [],
+      "applications": [],
+      "data_objects": [],
+      "signals": []
+    },
+    "validation": {
+      "completeness_score": 0,
+      "validated_by_user": false
+    },
+    "created_at": "2026-01-01T21:39:32.556000+00:00",
+    "updated_at": "2026-01-01T21:39:32.758000+00:00"
+  },
+  {
+    "id": "0771db4f-a730-42ea-a198-408287c04ec3",
+    "title": "Interview Aide à la Décision",
+    "type": "decision",
+    "context": {
+      "objective": "Structurer la prise de décision",
+      "motivation": null,
+      "constraints": [],
+      "decision_focus": null,
+      "editable_by_interviewee": true,
+      "interviewee_comments": null
+    },
+    "decisions": [],
+    "processes": [],
+    "inventory": {
+      "actors": [],
+      "applications": [],
+      "data_objects": [],
+      "signals": []
+    },
+    "validation": {
+      "completeness_score": 0,
+      "validated_by_user": false
+    },
+    "created_at": "2026-01-01T21:46:54.372000+00:00",
+    "updated_at": "2026-01-01T21:46:54.372000+00:00"
+  },
+  {
+    "id": "b6c15076-1cfd-4804-9e0e-1e49c7864c57",
+    "title": "Interview Aide à la Décision",
+    "type": "decision",
+    "context": {
+      "objective": "Structurer la prise de décision",
+      "motivation": null,
+      "constraints": [],
+      "decision_focus": null,
+      "editable_by_interviewee": true,
+      "interviewee_comments": null
+    },
+    "decisions": [],
+    "processes": [],
+    "inventory": {
+      "actors": [],
+      "applications": [],
+      "data_objects": [],
+      "signals": []
+    },
+    "validation": {
+      "completeness_score": 0,
+      "validated_by_user": false
+    },
+    "created_at": "2026-01-01T23:36:37.654000+00:00",
+    "updated_at": "2026-01-01T23:36:37.659000+00:00"
+  },
+  {
+    "id": "d7ef36ff-1ec6-4e6b-9d12-efe20411a7da",
+    "title": "Interview Aide à la Décision",
+    "type": "decision",
+    "context": {
+      "objective": "Structurer la prise de décision",
+      "motivation": null,
+      "constraints": [],
+      "decision_focus": null,
+      "editable_by_interviewee": true,
+      "interviewee_comments": null
+    },
+    "decisions": [],
+    "processes": [],
+    "inventory": {
+      "actors": [],
+      "applications": [],
+      "data_objects": [],
+      "signals": []
+    },
+    "validation": {
+      "completeness_score": 0,
+      "validated_by_user": false
+    },
+    "created_at": "2026-01-02T12:59:11.566000+00:00",
+    "updated_at": "2026-01-02T12:59:11.570000+00:00"
+  },
+  {
+    "id": "8021d629-c31a-46c0-a9fb-100aeb747a08",
+    "title": "Interview Aide à la Décision",
+    "type": "decision",
+    "context": {
+      "objective": "Structurer la prise de décision",
+      "motivation": null,
+      "constraints": [],
+      "decision_focus": null,
+      "editable_by_interviewee": true,
+      "interviewee_comments": null
+    },
+    "decisions": [],
+    "processes": [],
+    "inventory": {
+      "actors": [],
+      "applications": [],
+      "data_objects": [],
+      "signals": []
+    },
+    "validation": {
+      "completeness_score": 0,
+      "validated_by_user": false
+    },
+    "created_at": "2026-01-02T12:59:50.945000+00:00",
+    "updated_at": "2026-01-02T12:59:50.945000+00:00"
+  }
+]

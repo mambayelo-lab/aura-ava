@@ -1,0 +1,40 @@
+{
+  "interview_id": "1e593f61-9e47-4844-9087-9e55d3f5bd0f",
+  "fact_graph": {
+    "nodes": [
+      {
+        "id": "act_0_0",
+        "type": "activity",
+        "label": "Recevoir une commande client",
+        "data": {
+          "validated": true
+        }
+      },
+      {
+        "id": "obj_0",
+        "type": "data_object",
+        "label": "Commande",
+        "data": {
+          "attributes": []
+        }
+      }
+    ],
+    "edges": []
+  },
+  "reasoning_graph": {
+    "nodes": [],
+    "edges": []
+  },
+  "validation": {
+    "valid": true,
+    "issues": []
+  },
+  "stats": {
+    "total_nodes": 2,
+    "total_edges": 0,
+    "facts": 1,
+    "rules": 0,
+    "signals": 0,
+    "pain_points": 0
+  }
+}

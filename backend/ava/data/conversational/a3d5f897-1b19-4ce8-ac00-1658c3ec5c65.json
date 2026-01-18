@@ -1,0 +1,457 @@
+{
+  "id": "a3d5f897-1b19-4ce8-ac00-1658c3ec5c65",
+  "created_at": "2026-01-02T00:58:01.846703",
+  "updated_at": "2026-01-02T03:04:54.497652",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [
+    {
+      "id": "act_0_0",
+      "label": "Identifier le PDL client",
+      "description": null,
+      "validated": true,
+      "trigger_event": "Demande client",
+      "trigger_actor": "Client",
+      "trigger_actor_type": "personne",
+      "trigger_system": "Site Web",
+      "output_object": "obj_0",
+      "output_system": "CRM",
+      "performed_by": "actor_0",
+      "performed_by_type": "personne",
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    },
+    {
+      "id": "act_1_1",
+      "label": "Estimer la consommation",
+      "description": null,
+      "validated": true,
+      "trigger_event": "Demande client",
+      "trigger_actor": "Client",
+      "trigger_actor_type": "personne",
+      "trigger_system": "Messagerie",
+      "output_object": "obj_0",
+      "output_system": "CRM",
+      "performed_by": "actor_1",
+      "performed_by_type": "personne",
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    },
+    {
+      "id": "act_2_2",
+      "label": "Proposer une offre",
+      "description": null,
+      "validated": true,
+      "trigger_event": "Demande client",
+      "trigger_actor": "Client",
+      "trigger_actor_type": "personne",
+      "trigger_system": "Messagerie",
+      "output_object": "obj_0",
+      "output_system": "CRM",
+      "performed_by": "actor_1",
+      "performed_by_type": "personne",
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    }
+  ],
+  "business_objects": [
+    {
+      "id": "obj_0",
+      "name": "Commande",
+      "attributes": [
+        "numéro",
+        "date",
+        "client",
+        "Numéro",
+        "Date",
+        "Client",
+        "Montant",
+        "Statut"
+      ],
+      "created_by_activity": "act_0_0",
+      "used_by_activities": [],
+      "source_system": "CRM"
+    }
+  ],
+  "actors": [
+    {
+      "id": "actor_0",
+      "name": "Conseiller de vente.",
+      "type": "personne",
+      "role": null,
+      "activities": [
+        "act_0_0"
+      ]
+    },
+    {
+      "id": "actor_1",
+      "name": "Conseiller commercial",
+      "type": "personne",
+      "role": null,
+      "activities": [
+        "act_1_1",
+        "act_2_2"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule_0",
+      "condition": "Si PDL non existant",
+      "action": "Créer PDL",
+      "type": "SI_ALORS",
+      "applies_to_activity": "act_0_0",
+      "applies_to_object": null
+    },
+    {
+      "id": "rule_1",
+      "condition": "montant > 5000€",
+      "action": "validation manager requise",
+      "type": "SI_ALORS",
+      "applies_to_activity": "act_1_1",
+      "applies_to_object": null
+    },
+    {
+      "id": "rule_2",
+      "condition": "montant > 5000€",
+      "action": "validation manager requise",
+      "type": "SI_ALORS",
+      "applies_to_activity": "act_2_2",
+      "applies_to_object": null
+    }
+  ],
+  "signals": [
+    {
+      "id": "signal_0",
+      "event": "",
+      "action": "",
+      "severity": "MEDIUM",
+      "threshold": null,
+      "applies_to_activity": "act_0_0"
+    },
+    {
+      "id": "signal_1",
+      "event": "",
+      "action": "",
+      "severity": "MEDIUM",
+      "threshold": null,
+      "applies_to_activity": "act_1_1"
+    },
+    {
+      "id": "signal_2",
+      "event": "",
+      "action": "",
+      "severity": "MEDIUM",
+      "threshold": null,
+      "applies_to_activity": "act_2_2"
+    }
+  ],
+  "pain_points": [
+    {
+      "id": "pain_0",
+      "description": "",
+      "impact": "temps_perdu",
+      "severity": "MEDIUM",
+      "related_activity": "act_0_0"
+    },
+    {
+      "id": "pain_1",
+      "description": "Processus manuel lent",
+      "impact": "temps_perdu",
+      "severity": "MEDIUM",
+      "related_activity": "act_1_1"
+    },
+    {
+      "id": "pain_2",
+      "description": "Processus manuel lent",
+      "impact": "temps_perdu",
+      "severity": "MEDIUM",
+      "related_activity": "act_2_2"
+    }
+  ],
+  "current_phase": "completed",
+  "current_activity_index": 3,
+  "current_question_index": 0,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Communiquez-moi en premier vos activités, dans l'ordre. Est-ce que cela vous convient?",
+      "timestamp": "2026-01-02T00:58:01.846703"
+    },
+    {
+      "role": "assistant",
+      "content": "Parfait ! Veuillez maintenant saisir vos activités dans l'ordre. Vous pouvez utiliser les exemples comme guide.",
+      "timestamp": "2026-01-02T00:58:09.718780"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent ! Nous avons 3 activités. Commençons par approfondir 'Identifier le PDL client'. Qu'est-ce qui déclenche l'activité 'Identifier le PDL client' ?",
+      "timestamp": "2026-01-02T01:03:47.858184"
+    },
+    {
+      "role": "user",
+      "content": "La demande client",
+      "timestamp": "2026-01-02T01:31:32.965746"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Identifier le PDL client' ?",
+      "timestamp": "2026-01-02T01:32:54.620698"
+    },
+    {
+      "role": "user",
+      "content": "Une demande de souscription",
+      "timestamp": "2026-01-02T01:34:02.255128"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles informations sont nécessaires pour réaliser 'Identifier le PDL client' ?",
+      "timestamp": "2026-01-02T01:34:45.951875"
+    },
+    {
+      "role": "user",
+      "content": "L'adresse du client",
+      "timestamp": "2026-01-02T01:35:53.252577"
+    },
+    {
+      "role": "assistant",
+      "content": "Qui réalise 'Identifier le PDL client' ?",
+      "timestamp": "2026-01-02T01:36:09.040341"
+    },
+    {
+      "role": "user",
+      "content": "Le conseiller.",
+      "timestamp": "2026-01-02T01:36:25.667457"
+    },
+    {
+      "role": "assistant",
+      "content": "Y a-t-il des règles métier à respecter pour 'Identifier le PDL client' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T01:37:06.757115"
+    },
+    {
+      "role": "user",
+      "content": "Si le PDL n'existe pas, il faut le créer",
+      "timestamp": "2026-01-02T01:38:05.791883"
+    },
+    {
+      "role": "assistant",
+      "content": "Quand faut-il être alerté concernant 'Identifier le PDL client' ? (Dites 'non' si jamais)",
+      "timestamp": "2026-01-02T01:39:28.688679"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-02T01:40:17.771286"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-02T01:40:32.343881"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles sont les difficultés rencontrées avec 'Identifier le PDL client' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T01:40:35.754688"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-02T01:40:42.915215"
+    },
+    {
+      "role": "assistant",
+      "content": "Très bien. Passons maintenant à 'Estimer la consommation'. Qu'est-ce qui déclenche l'activité 'Estimer la consommation' ?",
+      "timestamp": "2026-01-02T01:40:47.701253"
+    },
+    {
+      "role": "user",
+      "content": "ezfdz",
+      "timestamp": "2026-01-02T01:41:18.256242"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Estimer la consommation' ?",
+      "timestamp": "2026-01-02T01:41:19.835585"
+    },
+    {
+      "role": "user",
+      "content": "sdfdsq",
+      "timestamp": "2026-01-02T01:41:22.992205"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles informations sont nécessaires pour réaliser 'Estimer la consommation' ?",
+      "timestamp": "2026-01-02T01:41:23.895892"
+    },
+    {
+      "role": "user",
+      "content": "dsfqsdf",
+      "timestamp": "2026-01-02T01:41:25.997995"
+    },
+    {
+      "role": "assistant",
+      "content": "Qui réalise 'Estimer la consommation' ?",
+      "timestamp": "2026-01-02T01:41:26.726501"
+    },
+    {
+      "role": "user",
+      "content": "sdfdsf",
+      "timestamp": "2026-01-02T01:41:28.566737"
+    },
+    {
+      "role": "assistant",
+      "content": "Y a-t-il des règles métier à respecter pour 'Estimer la consommation' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T01:41:29.551513"
+    },
+    {
+      "role": "user",
+      "content": "fdzs",
+      "timestamp": "2026-01-02T01:41:31.995850"
+    },
+    {
+      "role": "assistant",
+      "content": "Quand faut-il être alerté concernant 'Estimer la consommation' ? (Dites 'non' si jamais)",
+      "timestamp": "2026-01-02T01:41:32.862945"
+    },
+    {
+      "role": "user",
+      "content": "zefezdez",
+      "timestamp": "2026-01-02T01:41:35.088954"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles sont les difficultés rencontrées avec 'Estimer la consommation' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T01:41:35.934321"
+    },
+    {
+      "role": "user",
+      "content": "zeezf",
+      "timestamp": "2026-01-02T01:41:38.008173"
+    },
+    {
+      "role": "assistant",
+      "content": "Très bien. Passons maintenant à 'Proposer une offre'. Qu'est-ce qui déclenche l'activité 'Proposer une offre' ?",
+      "timestamp": "2026-01-02T01:41:38.790837"
+    },
+    {
+      "role": "user",
+      "content": "zefeza",
+      "timestamp": "2026-01-02T01:41:41.713182"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Proposer une offre' ?",
+      "timestamp": "2026-01-02T01:41:42.762276"
+    },
+    {
+      "role": "user",
+      "content": "efzaef",
+      "timestamp": "2026-01-02T01:41:45.471604"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles informations sont nécessaires pour réaliser 'Proposer une offre' ?",
+      "timestamp": "2026-01-02T01:41:46.984057"
+    },
+    {
+      "role": "user",
+      "content": "zefzef",
+      "timestamp": "2026-01-02T01:41:49.196984"
+    },
+    {
+      "role": "assistant",
+      "content": "Qui réalise 'Proposer une offre' ?",
+      "timestamp": "2026-01-02T01:41:50.087399"
+    },
+    {
+      "role": "user",
+      "content": "ezfez",
+      "timestamp": "2026-01-02T01:41:52.417292"
+    },
+    {
+      "role": "assistant",
+      "content": "Y a-t-il des règles métier à respecter pour 'Proposer une offre' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T01:41:53.171952"
+    },
+    {
+      "role": "user",
+      "content": "zfe",
+      "timestamp": "2026-01-02T01:41:55.659148"
+    },
+    {
+      "role": "assistant",
+      "content": "Quand faut-il être alerté concernant 'Proposer une offre' ? (Dites 'non' si jamais)",
+      "timestamp": "2026-01-02T01:41:56.468657"
+    },
+    {
+      "role": "user",
+      "content": "ezfez",
+      "timestamp": "2026-01-02T01:41:58.738146"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles sont les difficultés rencontrées avec 'Proposer une offre' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-02T01:41:59.590518"
+    },
+    {
+      "role": "user",
+      "content": "ef",
+      "timestamp": "2026-01-02T01:42:02.669824"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent ! Nous avons capturé toutes les informations. Voici la synthèse complète de votre processus. Vous pouvez maintenant l'enrichir, le modifier ou le valider.",
+      "timestamp": "2026-01-02T01:42:03.704165"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-02T01:51:02.238354"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-02T01:51:08.522713"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-02T01:57:21.491862"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-02T01:58:12.745946"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-02T02:02:36.678515"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-02T02:20:46.997832"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-02T02:51:06.431973"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-02T02:55:20.944033"
+    }
+  ],
+  "status": "completed",
+  "submitted_at": "2026-01-02T01:43:30.359333",
+  "notes_to_architects": ""
+}

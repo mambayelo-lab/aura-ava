@@ -1,0 +1,185 @@
+{
+  "id": "b0651daf-104f-4f94-8939-fd4f5d00b830",
+  "created_at": "2026-01-03T17:38:09.094772",
+  "updated_at": "2026-01-03T17:53:50.165519",
+  "perimeter": "",
+  "objective": "",
+  "mode": "transformation",
+  "activities": [
+    {
+      "id": "act_0_0",
+      "label": "Signer le contrat avec le client",
+      "description": null,
+      "validated": true,
+      "trigger_event": "Signature par le client",
+      "trigger_actor": "Client",
+      "trigger_actor_type": "personne",
+      "trigger_system": "Site web",
+      "output_object": "obj_0",
+      "output_system": "CRM",
+      "performed_by": "actor_0",
+      "performed_by_type": "personne",
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    },
+    {
+      "id": "act_1_1",
+      "label": "Déclencher le processus de facturation",
+      "description": null,
+      "validated": true,
+      "trigger_event": null,
+      "trigger_actor": null,
+      "trigger_actor_type": null,
+      "trigger_system": null,
+      "output_object": null,
+      "output_system": null,
+      "performed_by": null,
+      "performed_by_type": null,
+      "next_activity_id": null,
+      "parent_activity_id": null,
+      "sub_activities": [],
+      "level": 1
+    }
+  ],
+  "business_objects": [
+    {
+      "id": "obj_0",
+      "name": "Contrat",
+      "attributes": [
+        "numéro",
+        "date",
+        "client",
+        "Numéro",
+        "Date",
+        "Client",
+        "Montant",
+        "Statut"
+      ],
+      "created_by_activity": "act_0_0",
+      "used_by_activities": [],
+      "source_system": "CRM"
+    }
+  ],
+  "actors": [
+    {
+      "id": "actor_0",
+      "name": "Le client.",
+      "type": "personne",
+      "role": null,
+      "activities": [
+        "act_0_0"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule_0",
+      "condition": "",
+      "action": "",
+      "type": "SI_ALORS",
+      "applies_to_activity": "act_0_0",
+      "applies_to_object": null
+    }
+  ],
+  "signals": [
+    {
+      "id": "signal_0",
+      "event": "",
+      "action": "",
+      "severity": "MEDIUM",
+      "threshold": null,
+      "applies_to_activity": "act_0_0"
+    }
+  ],
+  "pain_points": [],
+  "current_phase": "completed",
+  "current_activity_index": 0,
+  "current_question_index": 6,
+  "messages": [
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Décrivez-moi ce qui se passe aujourd'hui dans votre processus. Communiquez-moi en premier vos activités, dans l'ordre. Est-ce que cela vous convient?",
+      "timestamp": "2026-01-03T17:38:09.094772"
+    },
+    {
+      "role": "assistant",
+      "content": "Parfait ! Veuillez maintenant saisir vos activités dans l'ordre. Vous pouvez utiliser les exemples comme guide.",
+      "timestamp": "2026-01-03T17:38:13.111089"
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent ! Nous avons 2 activités. Commençons par approfondir 'Signer le contrat avec le client'. Qu'est-ce qui déclenche l'activité 'Signer le contrat avec le client' ?",
+      "timestamp": "2026-01-03T17:39:37.472425"
+    },
+    {
+      "role": "user",
+      "content": "La signature par le client du contrat",
+      "timestamp": "2026-01-03T17:40:10.820954"
+    },
+    {
+      "role": "assistant",
+      "content": "Qu'est-ce qui est produit ou créé par 'Signer le contrat avec le client' ?",
+      "timestamp": "2026-01-03T17:43:50.227183"
+    },
+    {
+      "role": "user",
+      "content": "Contrat signé par le client",
+      "timestamp": "2026-01-03T17:45:27.169695"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles informations sont nécessaires pour réaliser 'Signer le contrat avec le client' ?",
+      "timestamp": "2026-01-03T17:46:26.772760"
+    },
+    {
+      "role": "user",
+      "content": "Adresse du client, PDL",
+      "timestamp": "2026-01-03T17:49:18.576104"
+    },
+    {
+      "role": "assistant",
+      "content": "Qui réalise 'Signer le contrat avec le client' ?",
+      "timestamp": "2026-01-03T17:49:41.143539"
+    },
+    {
+      "role": "user",
+      "content": "Le client",
+      "timestamp": "2026-01-03T17:49:52.884240"
+    },
+    {
+      "role": "assistant",
+      "content": "Y a-t-il des règles métier à respecter pour 'Signer le contrat avec le client' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-03T17:50:08.463645"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-03T17:50:23.120520"
+    },
+    {
+      "role": "assistant",
+      "content": "Quand faut-il être alerté concernant 'Signer le contrat avec le client' ? (Dites 'non' si jamais)",
+      "timestamp": "2026-01-03T17:50:31.466281"
+    },
+    {
+      "role": "user",
+      "content": "non",
+      "timestamp": "2026-01-03T17:53:41.586067"
+    },
+    {
+      "role": "assistant",
+      "content": "Quelles sont les difficultés rencontrées avec 'Signer le contrat avec le client' ? (Dites 'non' si aucune)",
+      "timestamp": "2026-01-03T17:53:46.016545"
+    },
+    {
+      "role": "assistant",
+      "content": "Interview terminée. Vous pouvez maintenant visualiser la restitution globale et ajouter des notes pour les architectes.",
+      "timestamp": "2026-01-03T17:53:50.165519"
+    }
+  ],
+  "status": "completed",
+  "submitted_at": null,
+  "notes_to_architects": ""
+}
